@@ -41,12 +41,14 @@ cdef double *coeff1 = <double*>malloc(n * sizeof(double))
 cdef double *coeff2 = <double*>malloc(n * sizeof(double))
 cdef double *coeff3 = <double*>malloc(n * sizeof(double))
 
+# arrays for interpolation coefficients of correction coefficients k
 cdef double *k_ = <double*>malloc(n * sizeof(double))
 cdef double *kcoeff1 = <double*>malloc(n * sizeof(double))
 cdef double *kcoeff2 = <double*>malloc(n * sizeof(double))
 cdef double *kcoeff3 = <double*>malloc(n * sizeof(double))
 cdef double *xx_     = <double*>malloc(n * sizeof(double))
 
+# sets vars C2, gamma, qsq2, rfr2 passed from bk_solver.py
 cpdef void set_params(double c_, double gamma_, double qsq_):
     global c2, gamma, qsq2, rfr2
 
@@ -77,6 +79,7 @@ cpdef void set_vars(double x, double n0_, list xlr_arr, list n_arr):
     # fill coefficient array
     spline(xlr_, n_, coeff1, coeff2, coeff3, n)
 
+# fills interpolation coefficient arrays for correction coefficients k
 cpdef void set_k(list xlr_arr, list k_arr):
     global k_, kcoeff1, kcoeff2, kcoeff3, xx_
 
@@ -89,12 +92,13 @@ cpdef void set_k(list xlr_arr, list k_arr):
 
     spline(xx_, k_, kcoeff1, kcoeff2, kcoeff3, n)
 
+# takes Python list type and returns C array
 cdef void convert_to_c(list l1, double *arr):
     cdef int i
     for i in range(len(l1)):
         arr[i] = l1[i]
 
-
+# takes C array and converts to Python list
 cdef convert_to_python(double *ptr, int n):
     cdef int i
     lst = []
@@ -130,12 +134,12 @@ cdef double alphaS(double rsq):
         xlog = log((4 * c2)/(rsq * lamb * lamb))
         return 1/(beta * xlog)
 
-
+# magnitude of r1 (daughter dipole 1) -- eq. (6) in papers/extra_eq.pdf
 cdef double find_r1(double r, double z, double thet):
     cdef double r12 = (0.25 * r * r) + (z * z) - (r * z * cos(thet))
     return sqrt(r12)
 
-
+# magnitude of r2 (daughter dipole 2) -- eq. (9) in papers/extra_eq.pdf
 cdef double find_r2(double r, double z, double thet):
     cdef double r22 = (0.25 * r * r) + (z * z) + (r * z * cos(thet))
     return sqrt(r22)
