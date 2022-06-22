@@ -69,7 +69,8 @@ def intg(xx):
     # compute integral
     return dblquad(func, xr1, xr2, 1.e-6, 0.5 * np.pi, epsabs=0.0, epsrel=1.e-4)[0]
 
-# return type: array
+# calculates correction coefficients according to eqs. (10)-(12) in papers/extra_eq.pdf
+# returns: correction k for each element in xlr_
 def evolve(order):
 
     # Euler's method
