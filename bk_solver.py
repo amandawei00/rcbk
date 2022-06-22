@@ -12,47 +12,61 @@ import warnings
 warnings.filterwarnings('ignore')
 
 # variables
-n = 399     # number of r points to be evaluated at each evolution step in Y
-r1 = 1.e-6  # limits of r
-r2 = 1.e2
 
-xr1 = np.log(r1)
-xr2 = np.log(r2)
+# number of r points to evaluate for each y
+n    = 399
 
-hr = (xr2 - xr1) / n
+# limits of r in N(r,y)
+r1   = 1.e-6
+r2   = 1.e2
 
-hy = 0.2
+xr1  = np.log(r1)
+xr2  = np.log(r2)
+
+hr   = (xr2 - xr1) / n
+
+# rapidity
+hy   = 0.2
 ymax = 16.
-y = np.arange(0.0, ymax, hy)
+y    = np.arange(0.0, ymax, hy)
 
 # Arrays for N and r in N(r)
 xlr_ = [xr1 + i * hr for i in range(n + 1)]
-r_ = np.exp(xlr_)
-n_ = []
+r_   = np.exp(xlr_)
+n_   = []
 
 # parameters
-nc = 3        # number of colors
-nf = 3        # number of active flavors
+nc   = 3        # number of colors
+nf   = 3        # number of active flavors
 lamb = 0.241  # lambda QCD (default)
 
 beta = (11 * nc - 2. * nf)/(12 * np.pi)
-afr = 0.7     # frozen coupling constant (default)
+     
+# frozen coupling constant (default)
+afr  = 0.7
 
-c2, gamma, qs02, ec = 0. , 0., 0., 0.   # fitting parameters
-e  = np.exp(1)
+# fitting parameters
+c2, gamma, qs02, ec = 0. , 0., 0., 0.
+e    = np.exp(1)
 
-# initial condition
+# MV initial condition -- eq. (2.14) in ref. 0902.1112
 def mv(r):
     xlog = np.log(1/(lamb * r) + ec * e)
     xexp = np.power(qs02 * r * r, gamma) * xlog/4.0
     return 1 - np.exp(-xexp)
 
+# computes integral in eq. (2.5) of ref. 0902.1112
 def intg(xx):
     index = xlr_.index(xx)
     nr0 = n_[index]
 
+    # passes variables to cython file solver.pyx to 'sync' the scripts
     so.set_vars(xx, nr0, xlr_, n_)
+
+    # converts integrand from solver.pyx to LowLevelCallable object for fast integration
     func = llc.from_cython(so, 'f', signature='double (int, double *)')
+
+    # compute integral
     return dblquad(func, xr1, xr2, 1.e-6, 0.5 * np.pi, epsabs=0.0, epsrel=1.e-4)[0]
 
 # return type: array
@@ -100,26 +114,27 @@ def master(q_, c2_, g_, ec_, filename='', order='RK4'):
     gamma = g_
     ec    = ec_
 
+    # pass variables to cython file
     so.set_params(c2, gamma, qs02) 
 
+    # write parameters to file
     l = ['n   ', 'r1  ', 'r2  ', 'y   ', 'hy  ', 'ec  ', 'qs02 ', 'c2  ', 'g ', 'order']
     v = [n, r1, r2, ymax, hy, ec, qs02, c2, gamma, order]
+
     bk_arr = []
     t1 = time.time()
 
-    # initial condition----------------------------------------------------------
+    # initial condition
     n_ = [mv(r_[i]) for i in range(len(r_))]
-    #----------------------------------------------------------------------------
+
     # begin evolution
     for i in range(len(y)):
         y0 = y[i]
-        # print("y = " + str(y0))
 
         for j in range(len(r_)):
-            # print('r = ' + str(r_[j]) + ', N(r,Y) = ' + str(n_[j]))
             bk_arr.append([y0, r_[j], n_[j]])
 
-        # calculate correction and update N(r,Y) to next step in rapidity
+       # calculate correction and update N(r,Y) to next step in rapidity
 
         xk = evolve(order)
         n_ = [n_[j] + xk[j] for j in range(len(n_))]
@@ -142,6 +157,7 @@ def master(q_, c2_, g_, ec_, filename='', order='RK4'):
     t2 = time.time()
     print('bk run time: ' + str((t2 - t1)/3600) + ' hours')
 
+    # if filename was specified, write final dataframe to file
     if filename != '':
         with open(filename, 'w') as csvfile:
             writer = csv.writer(csvfile, delimiter='\t')
@@ -150,15 +166,17 @@ def master(q_, c2_, g_, ec_, filename='', order='RK4'):
             for j in range(len(bk_arr)):
                 writer.writerow(bk_arr[j])
 
+    # return final dataframe (useful for fitting)
     return pd.DataFrame(bk_arr, columns=['y', 'r', 'N(r,Y)'])
 
 if __name__ == "__main__":
-    # qsq2, c^2, g, ec, filename
     p = []
 
+    # read parameters from 'params.csv'
     with open('params.csv', 'r') as foo:
         reader = csv.reader(foo, delimiter='\t')
         header = next(reader)
         p      = next(reader)
 
+    # call evolution
     bk = master(float(p[0]), float(p[1]), float(p[2]), float(p[3]), p[4], p[5])
