@@ -14,14 +14,12 @@ cdef extern from "spline_c.c":
     double ispline(double u, double *x, double *y, double *b, double *c, double *d, int n)
 
 # variables
-cdef int n = 399                   # number of r points evaluated at each evolution step in Y
+cdef int n = 399                   # number of r points evaluated at each step in Y
 cdef double r1 = 1.e-6             # lower limit of r
 cdef double r2 = 1.e2              # upper limit of r
 
 cdef double xr1 = log(r1)          # convert lower r limit to logspace
 cdef double xr2 = log(r2)          # convert upper r limit to logspace
-
-cdef double hr = (xr2 - xr1) / n
 
 # parameters
 cdef int nc = 3                     # number of colors
@@ -104,7 +102,10 @@ cdef convert_to_python(double *ptr, int n):
         lst.append(ptr[i])
     return lst
 
-
+# interpolator
+# Below xr1, exponential decay sufficiently approximates N(r,Y)
+# Above xr2, N(r,Y) is sufficiently close to 1
+# Between xr1 and xr2, the grid is interpolated with C routine in 'spline_c.c'
 cdef double nfunc(double qlr):
     cdef double x = 0.0
     if qlr < xr1:
@@ -119,7 +120,8 @@ cdef double nfunc(double qlr):
 
     return x
 
-
+# running coupling -- eq. (2.11)
+# above rfr, running coupling is frozen to afr=0.7
 cdef double alphaS(double rsq):
     cdef double xlog
     if rsq > rfr2:
@@ -127,7 +129,8 @@ cdef double alphaS(double rsq):
     else:
         xlog = log((4 * c2)/(rsq * lamb * lamb))
         return 1/(beta * xlog)
-       
+
+
 cdef double find_r1(double r, double z, double thet):
     cdef double r12 = (0.25 * r * r) + (z * z) - (r * z * cos(thet))
     return sqrt(r12)
@@ -138,7 +141,7 @@ cdef double find_r2(double r, double z, double thet):
     return sqrt(r22)
 
 
-# kernel
+# kernel -- eq. (2.10) in ref. 0902.1112
 cdef double k(double r, double r1_, double r2_):
     cdef double rr, r12, r22
     cdef double t1, t2, t3
@@ -158,7 +161,8 @@ cdef double k(double r, double r1_, double r2_):
         prefac = (nc * alphaS(rr))/(2 * M_PI * M_PI)
         return prefac * (t1 + t2 + t3)
 
-# combined integrand
+# rcbk integrand -- eq. (2.9)
+# change of variables 
 cdef double f(int num, double *xx):
     cdef double z, r1_, r2_
     cdef double xlr1, xlr2, kr0, kr1, kr2
