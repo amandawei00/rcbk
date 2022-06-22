@@ -3,18 +3,10 @@ import csv
 import pandas as pd
 from multiprocessing import Pool
 import time
-import numba
-from numba import jit
-from numba import cfunc, carray
-from numba.types import intc, intp, float64, voidptr
-from numba.types import CPointer
 from scipy import LowLevelCallable as llc
 import scipy.interpolate as interpolate
-from scipy.interpolate import UnivariateSpline
-from scipy.integrate import nquad
 from scipy.integrate import dblquad
 import solver as so
-import subprocess
 
 import warnings
 warnings.filterwarnings('ignore')
@@ -33,7 +25,7 @@ hy = 0.2
 ymax = 16.
 y = np.arange(0.0, ymax, hy)
 
-# Arrays for N and r in N(r), evaluated at some rapidity Y (including next step N(r,Y) in the evolution
+# Arrays for N and r in N(r)
 xlr_ = [xr1 + i * hr for i in range(n + 1)]
 r_ = np.exp(xlr_)
 n_ = []

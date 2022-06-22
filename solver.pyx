@@ -7,7 +7,6 @@ from libc.stdlib cimport malloc, free
 from libc.string cimport memset
 from libc.math cimport exp, log, sqrt, cos, M_PI, isnan
 cnp.import_array()
-import matplotlib.pyplot as plt
 
 # load interpolation routines from spline_c.c
 cdef extern from "spline_c.c":
