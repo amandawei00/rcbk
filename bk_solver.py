@@ -11,47 +11,16 @@ import solver as so
 import warnings
 warnings.filterwarnings('ignore')
 
-# variables
-
-# number of r points to evaluate for each y
-n    = 399
-
-# limits of r in N(r,y)
-r1   = 1.e-6
-r2   = 1.e2
-
-xr1  = np.log(r1)
-xr2  = np.log(r2)
-
-hr   = (xr2 - xr1) / n
-
-# rapidity
-hy   = 0.2
-ymax = 16.
-y    = np.arange(0.0, ymax, hy)
-
-# Arrays for N and r in N(r)
-xlr_ = [xr1 + i * hr for i in range(n + 1)]
-r_   = np.exp(xlr_)
-n_   = []
-
 # parameters
 nc   = 3        # number of colors
 nf   = 3        # number of active flavors
 lamb = 0.241  # lambda QCD (default)
 
 beta = (11 * nc - 2. * nf)/(12 * np.pi)
-     
-# frozen coupling constant (default)
-afr  = 0.7
-
-# fitting parameters
-c2, gamma, qs02, ec = 0. , 0., 0., 0.
-e    = np.exp(1)
 
 # MV initial condition -- eq. (2.14) in ref. 0902.1112
 def mv(r):
-    xlog = np.log(1/(lamb * r) + ec * e)
+    xlog = np.log(1/(lamb * r) + ec * np.exp(1))
     xexp = np.power(qs02 * r * r, gamma) * xlog/4.0
     return 1 - np.exp(-xexp)
 
@@ -106,17 +75,25 @@ def evolve(order):
         return (1/6) * hy * (k1 + 2 * k2 + 2 * k3 + k4)
 
 # pass fitting variables q_, c_, g_ to set variables in master.py
-def master(q_, c2_, g_, ec_, filename='', order='RK4'):
-    global n_, qs02, c2, gamma, ec
+def master(q_, c2_, g_, ec_, filename='', order='RK4', nn_=399, rr1_=1e-6, rr2_=1e2, ymax_=16., hy_=0.2, afr_=0.7):
+    global n_, xlr_, r_
+    global qs02, c2, gamma, ec, n, r1, r2, xr1, xr2, hy
+
+    qs02, c2, gamma, ec = q_, c2_, g_, ec_
 
     # variables
-    qs02  = q_
-    c2    = c2_
-    gamma = g_
-    ec    = ec_
+    n         = nn_
+    r1, r2    = rr1_, rr2_
+    ymax, hy  = ymax_, hy_
+
+    xr1, xr2  = np.log(r1), np.log(r2)
+    hr   = (xr2 - xr1) / n
+    xlr_ = [xr1 + i * hr for i in range(n+1)]
+    r_   = np.exp(xlr_)
+    y    = np.arange(0.0, ymax, hy)
 
     # pass variables to cython file
-    so.set_params(c2, gamma, qs02) 
+    so.set_params(qs02, gamma, c2, n, r1, r2, xr1, xr2, afr_) 
 
     # write parameters to file
     l = ['n   ', 'r1  ', 'r2  ', 'y   ', 'hy  ', 'ec  ', 'qs02 ', 'c2  ', 'g ', 'order']
@@ -175,9 +152,11 @@ if __name__ == "__main__":
 
     # read parameters from 'params.csv'
     with open('params.csv', 'r') as foo:
-        reader = csv.reader(foo, delimiter='\t')
-        header = next(reader)
-        p      = next(reader)
+        reader  = csv.reader(foo, delimiter='\t')
+        header1 = next(reader)
+        v       = next(reader)
+        header2 = next(reader)
+        p       = next(reader)
 
     # call evolution
-    bk = master(float(p[0]), float(p[1]), float(p[2]), float(p[3]), p[4], p[5])
+    bk = master(float(p[0]), float(p[1]), float(p[2]), float(p[3]), p[4], p[5], int(v[0]), float(v[1]), float(v[2]), float(v[3]), float(v[4]), float(v[5]))

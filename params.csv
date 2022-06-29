@@ -1,2 +1,4 @@
+n	rmin	rmax	ymax	hy	afr
+399	1e-6	1e2	8.	0.2	0.7
 qsq0	c^2	gamma	ec	filename	order
-0.15	6.5	1.13	1.	results/RK2/albacete.csv	RK2
+0.104	14.5	1.0	1.	test.csv	RK2

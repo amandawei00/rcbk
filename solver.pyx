@@ -13,24 +13,16 @@ cdef extern from "spline_c.c":
     void spline(double *x, double *y, double *b, double *c, double *d, int n)
     double ispline(double u, double *x, double *y, double *b, double *c, double *d, int n)
 
-# variables
-cdef int n = 399                   # number of r points evaluated at each step in Y
-cdef double r1 = 1.e-6             # lower limit of r
-cdef double r2 = 1.e2              # upper limit of r
-
-cdef double xr1 = log(r1)          # convert lower r limit to logspace
-cdef double xr2 = log(r2)          # convert upper r limit to logspace
-
 # parameters
 cdef int nc = 3                     # number of colors
 cdef int nf = 3                     # number of active flavors
 cdef double lamb = 0.241
 
 cdef double beta = (11 * nc - 2. * nf)/(12 * M_PI)
-cdef double afr = 0.7               # frozen coupling constant (default)
 
+cdef int n
 cdef double c2, gamma, qsq2            # fitting parameters
-cdef double xr0, r0, n0, rfr2
+cdef double xr0, r0, n0, rfr2, r1, r2, xr1, xr2, afr
 
 # allocating memory space for arrays
 # xlr_, n_ describe the most current BK solution
@@ -49,14 +41,14 @@ cdef double *kcoeff3 = <double*>malloc(n * sizeof(double))
 cdef double *xx_     = <double*>malloc(n * sizeof(double))
 
 # sets vars C2, gamma, qsq2, rfr2 passed from bk_solver.py
-cpdef void set_params(double c_, double gamma_, double qsq_):
-    global c2, gamma, qsq2, rfr2
+cpdef void set_params(double qsq_, double gamma_, double c_, int nn_, double rr1_, double rr2_, double xrr1_, double xrr2_, afr_):
+    global c2, gamma, qsq2, rfr2, n, r1, r2, xr1, xr2, afr
 
-    c2 = c_
-    gamma = gamma_
-    qsq2 = qsq_
+    c2, gamma, qsq2 = c_, gamma_, qsq_
+    n, r1, r2, xr1, xr2, afr = nn_, rr1_, rr2_, xrr1_, xrr2_, afr_
 
     rfr2 = 4 * c2/(lamb * lamb * exp(1/(beta * afr)))
+    print('n = ' + str(n) + ', r1 = ' + str(r1) + ', r2 = ' + str(r2))
     print('c2 = ' + str(c2) + ', g = ' + str(gamma) + ', qsq2 = ' + str(qsq2))
 
 # called to set coefficients at the beginning of each step of the evolution
@@ -167,6 +159,7 @@ cdef double k(double r, double r1_, double r2_):
 
 # rcbk integrand -- eq. (2.9)
 # change of variables 
+# *xx = [theta, r]
 cdef double f(int num, double *xx):
     cdef double z, r1_, r2_
     cdef double xlr1, xlr2, kr0, kr1, kr2
