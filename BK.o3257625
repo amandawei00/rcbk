@@ -1,6 +1,6 @@
 399
 n = 399, r1 = 1e-06, r2 = 100.0
-c2 = 6.35, g = 1.135, qsq2 = 0.165
+c2 = 7.05, g = 1.129, qsq2 = 0.1586
 0.0
 initial condition written
 corrections calculated
@@ -121,4 +121,4 @@ corrections calculated
 7.800000000000001
 initial condition written
 corrections calculated
-bk run time: 0.8101602188746134 hours
+bk run time: 0.7345599844720628 hours

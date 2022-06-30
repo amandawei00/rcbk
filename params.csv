@@ -1,4 +1,4 @@
 n	rmin	rmax	ymax	hy	afr
 399	1e-6	1e2	8.	0.2	0.7
 qsq0	c^2	gamma	ec	filename	order
-0.06	7.2	1.	18.9	mve_test.csv	RK2
+0.1586	7.05	1.129	1.	mvg1_test.csv	RK2
