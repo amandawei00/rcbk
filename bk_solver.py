@@ -108,15 +108,15 @@ def master(q_, c2_, g_, ec_, filename='', order='RK4', nn_=399, rr1_=1e-6, rr2_=
     # begin evolution
     for i in range(len(y)):
         y0 = y[i]
-
+        print(y0)
         for j in range(len(r_)):
             bk_arr.append([y0, r_[j], n_[j]])
 
        # calculate correction and update N(r,Y) to next step in rapidity
-
+        print('initial condition written')
         xk = evolve(order)
         n_ = [n_[j] + xk[j] for j in range(len(n_))]
-
+        print('corrections calculated')
         # remove nan values from solution
         xx = np.array(xlr_)
         nn = np.array(n_)

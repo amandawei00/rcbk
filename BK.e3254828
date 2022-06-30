@@ -1,0 +1,807 @@
+*** Error in `python3': free(): invalid size: 0x0000000003199d90 ***
+======= Backtrace: =========
+/lib64/libc.so.6(+0x81329)[0x2b1172e81329]
+/lib64/libpython3.6m.so.1.0(+0xb55ed)[0x2b11720685ed]
+/lib64/libpython3.6m.so.1.0(+0xc1058)[0x2b1172074058]
+/lib64/libpython3.6m.so.1.0(+0xd767f)[0x2b117208a67f]
+/lib64/libpython3.6m.so.1.0(+0xdd2e9)[0x2b11720902e9]
+/lib64/libpython3.6m.so.1.0(+0x18772a)[0x2b117213a72a]
+/lib64/libpython3.6m.so.1.0(_PyGC_CollectNoFail+0x29)[0x2b11721955d9]
+/lib64/libpython3.6m.so.1.0(PyImport_Cleanup+0x26c)[0x2b117211d27c]
+/lib64/libpython3.6m.so.1.0(Py_FinalizeEx+0x67)[0x2b117218caf7]
+/lib64/libpython3.6m.so.1.0(Py_Main+0x51e)[0x2b11721948fe]
+python3(main+0x119)[0x400ab9]
+/lib64/libc.so.6(__libc_start_main+0xf5)[0x2b1172e22555]
+python3[0x400c40]
+======= Memory map: ========
+00400000-00401000 r-xp 00000000 08:03 786817                             /usr/bin/python3.6
+00601000-00602000 r--p 00001000 08:03 786817                             /usr/bin/python3.6
+00602000-00603000 rw-p 00002000 08:03 786817                             /usr/bin/python3.6
+02423000-0336d000 rw-p 00000000 00:00 0                                  [heap]
+2b1171d8f000-2b1171db1000 r-xp 00000000 08:03 936021                     /usr/lib64/ld-2.17.so
+2b1171db1000-2b1171db4000 rw-p 00000000 00:00 0 
+2b1171dd5000-2b1171f1a000 rw-p 00000000 00:00 0 
+2b1171f3f000-2b1171f7f000 rw-p 00000000 00:00 0 
+2b1171fb0000-2b1171fb1000 r--p 00021000 08:03 936021                     /usr/lib64/ld-2.17.so
+2b1171fb1000-2b1171fb2000 rw-p 00022000 08:03 936021                     /usr/lib64/ld-2.17.so
+2b1171fb2000-2b1171fb3000 rw-p 00000000 00:00 0 
+2b1171fb3000-2b1172240000 r-xp 00000000 08:03 936813                     /usr/lib64/libpython3.6m.so.1.0
+2b1172240000-2b1172440000 ---p 0028d000 08:03 936813                     /usr/lib64/libpython3.6m.so.1.0
+2b1172440000-2b1172443000 r--p 0028d000 08:03 936813                     /usr/lib64/libpython3.6m.so.1.0
+2b1172443000-2b11724a9000 rw-p 00290000 08:03 936813                     /usr/lib64/libpython3.6m.so.1.0
+2b11724a9000-2b11724db000 rw-p 00000000 00:00 0 
+2b11724db000-2b11724f2000 r-xp 00000000 08:03 935426                     /usr/lib64/libpthread-2.17.so
+2b11724f2000-2b11726f1000 ---p 00017000 08:03 935426                     /usr/lib64/libpthread-2.17.so
+2b11726f1000-2b11726f2000 r--p 00016000 08:03 935426                     /usr/lib64/libpthread-2.17.so
+2b11726f2000-2b11726f3000 rw-p 00017000 08:03 935426                     /usr/lib64/libpthread-2.17.so
+2b11726f3000-2b11726f7000 rw-p 00000000 00:00 0 
+2b11726f7000-2b11726f9000 r-xp 00000000 08:03 935687                     /usr/lib64/libdl-2.17.so
+2b11726f9000-2b11728f9000 ---p 00002000 08:03 935687                     /usr/lib64/libdl-2.17.so
+2b11728f9000-2b11728fa000 r--p 00002000 08:03 935687                     /usr/lib64/libdl-2.17.so
+2b11728fa000-2b11728fb000 rw-p 00003000 08:03 935687                     /usr/lib64/libdl-2.17.so
+2b11728fb000-2b11728fd000 r-xp 00000000 08:03 936278                     /usr/lib64/libutil-2.17.so
+2b11728fd000-2b1172afc000 ---p 00002000 08:03 936278                     /usr/lib64/libutil-2.17.so
+2b1172afc000-2b1172afd000 r--p 00001000 08:03 936278                     /usr/lib64/libutil-2.17.so
+2b1172afd000-2b1172afe000 rw-p 00002000 08:03 936278                     /usr/lib64/libutil-2.17.so
+2b1172afe000-2b1172bff000 r-xp 00000000 08:03 934751                     /usr/lib64/libm-2.17.so
+2b1172bff000-2b1172dfe000 ---p 00101000 08:03 934751                     /usr/lib64/libm-2.17.so
+2b1172dfe000-2b1172dff000 r--p 00100000 08:03 934751                     /usr/lib64/libm-2.17.so
+2b1172dff000-2b1172e00000 rw-p 00101000 08:03 934751                     /usr/lib64/libm-2.17.so
+2b1172e00000-2b1172fc4000 r-xp 00000000 08:03 936163                     /usr/lib64/libc-2.17.so
+2b1172fc4000-2b11731c3000 ---p 001c4000 08:03 936163                     /usr/lib64/libc-2.17.so
+2b11731c3000-2b11731c7000 r--p 001c3000 08:03 936163                     /usr/lib64/libc-2.17.so
+2b11731c7000-2b11731c9000 rw-p 001c7000 08:03 936163                     /usr/lib64/libc-2.17.so
+2b11731c9000-2b11731ce000 rw-p 00000000 00:00 0 
+2b11731ce000-2b1179711000 r--p 00000000 08:03 1451504                    /usr/lib/locale/locale-archive
+2b1179711000-2b1179791000 rw-p 00000000 00:00 0 
+2b1179791000-2b1179794000 r-xp 00000000 08:03 1844571                    /usr/lib64/python3.6/lib-dynload/_heapq.cpython-36m-x86_64-linux-gnu.so
+2b1179794000-2b1179993000 ---p 00003000 08:03 1844571                    /usr/lib64/python3.6/lib-dynload/_heapq.cpython-36m-x86_64-linux-gnu.so
+2b1179993000-2b1179994000 r--p 00002000 08:03 1844571                    /usr/lib64/python3.6/lib-dynload/_heapq.cpython-36m-x86_64-linux-gnu.so
+2b1179994000-2b1179996000 rw-p 00003000 08:03 1844571                    /usr/lib64/python3.6/lib-dynload/_heapq.cpython-36m-x86_64-linux-gnu.so
+2b1179996000-2b1179a16000 rw-p 00000000 00:00 0 
+2b1179a16000-2b1179dbb000 r-xp 00000000 00:30 9258328054130441743        /u/home/a/amandawe/.local/lib/python3.6/site-packages/numpy/core/_multiarray_umath.cpython-36m-x86_64-linux-gnu.so
+2b1179dbb000-2b1179fba000 ---p 003a5000 00:30 9258328054130441743        /u/home/a/amandawe/.local/lib/python3.6/site-packages/numpy/core/_multiarray_umath.cpython-36m-x86_64-linux-gnu.so
+2b1179fba000-2b1179fda000 rw-p 003a4000 00:30 9258328054130441743        /u/home/a/amandawe/.local/lib/python3.6/site-packages/numpy/core/_multiarray_umath.cpython-36m-x86_64-linux-gnu.so
+2b1179fda000-2b1179ffa000 rw-p 00000000 00:00 0 
+2b1179ffa000-2b117a001000 rw-p 00417000 00:30 9258328054130441743        /u/home/a/amandawe/.local/lib/python3.6/site-packages/numpy/core/_multiarray_umath.cpython-36m-x86_64-linux-gnu.so
+2b117a001000-2b117baa3000 r-xp 00000000 00:30 9258328062719725898        /u/home/a/amandawe/.local/lib/python3.6/site-packages/numpy.libs/libopenblasp-r0-8a0c371f.3.13.so
+2b117baa3000-2b117bca3000 ---p 01aa2000 00:30 9258328062719725898        /u/home/a/amandawe/.local/lib/python3.6/site-packages/numpy.libs/libopenblasp-r0-8a0c371f.3.13.so
+2b117bca3000-2b117bcbd000 rw-p 01aa2000 00:30 9258328062719725898        /u/home/a/amandawe/.local/lib/python3.6/site-packages/numpy.libs/libopenblasp-r0-8a0c371f.3.13.so
+2b117bcbd000-2b117bcc8000 rw-p 00000000 00:00 0 
+2b117bcc8000-2b117bd42000 rw-p 01b93000 00:30 9258328062719725898        /u/home/a/amandawe/.local/lib/python3.6/site-packages/numpy.libs/libopenblasp-r0-8a0c371f.3.13.so
+2b117bd42000-2b117be32000 r-xp 00000000 00:30 9258328062719725899        /u/home/a/amandawe/.local/lib/python3.6/site-packages/numpy.libs/libgfortran-ed201abd.so.3.0.0
+2b117be32000-2b117c031000 ---p 000f0000 00:30 9258328062719725899        /u/home/a/amandawe/.local/lib/python3.6/site-packages/numpy.libs/libgfortran-ed201abd.so.3.0.0
+2b117c031000-2b117c033000 rw-p 000ef000 00:30 9258328062719725899        /u/home/a/amandawe/.local/lib/python3.6/site-packages/numpy.libs/libgfortran-ed201abd.so.3.0.0
+2b117c033000-2b117c034000 rw-p 00000000 00:00 0 
+2b117c034000-2b117c03c000 rw-p 000f2000 00:30 9258328062719725899        /u/home/a/amandawe/.local/lib/python3.6/site-packages/numpy.libs/libgfortran-ed201abd.so.3.0.0
+2b117c1fc000-2b117c27c000 rw-p 00000000 00:00 0 
+2b117c840000-2b1194840000 rw-p 00000000 00:00 0 
+2b1194a41000-2b119ca41000 rw-p 00000000 00:00 0 
+2b119cc42000-2b11a4c42000 rw-p 00000000 00:00 0 
+2b11a4e43000-2b11ace43000 rw-p 00000000 00:00 0 
+2b11ad245000-2b11b5245000 rw-p 00000000 00:00 0 
+2b11b5647000-2b11cd647000 rw-p 00000000 00:00 0 
+2b11cde4b000-2b11d5e4b000 rw-p 00000000 00:00 0 
+2b11d604c000-2b11ee04c000 rw-p 00000000 00:00 0 
+2b11ee04c000-2b11ee04d000 ---p 00000000 00:00 0 
+2b11ee04d000-2b11ee24d000 rw-p 00000000 00:00 0 
+2b11ee24d000-2b11fe24d000 rw-p 00000000 00:00 0 
+2b11fe24d000-2b11fe24e000 ---p 00000000 00:00 0 
+2b11fe24e000-2b11fe44e000 rw-p 00000000 00:00 0 
+2b11fe44e000-2b11fe44f000 ---p 00000000 00:00 0 
+2b11fe44f000-2b11fe64f000 rw-p 00000000 00:00 0 
+2b11fe64f000-2b11fe650000 ---p 00000000 00:00 0 
+2b11fe650000-2b11fe850000 rw-p 00000000 00:00 0 
+2b11fe850000-2b120e850000 rw-p 00000000 00:00 0 
+2b120e850000-2b120e851000 ---p 00000000 00:00 0 
+2b120e851000-2b120ea51000 rw-p 00000000 00:00 0 
+2b120ea51000-2b1216a51000 rw-p 00000000 00:00 0 
+2b1216a51000-2b1216a52000 ---p 00000000 00:00 0 
+2b1216a52000-2b1216c52000 rw-p 00000000 00:00 0 
+2b1216c52000-2b1226c52000 rw-p 00000000 00:00 0 
+2b1226c52000-2b1226c53000 ---p 00000000 00:00 0 
+2b1226c53000-2b1226e53000 rw-p 00000000 00:00 0 
+2b1226e53000-2b1226e54000 ---p 00000000 00:00 0 
+2b1226e54000-2b1227054000 rw-p 00000000 00:00 0 
+2b1227054000-2b122f054000 rw-p 00000000 00:00 0 
+2b122f054000-2b122f055000 ---p 00000000 00:00 0 
+2b122f055000-2b122f255000 rw-p 00000000 00:00 0 
+2b122f255000-2b1237255000 rw-p 00000000 00:00 0 
+2b1237255000-2b1237256000 ---p 00000000 00:00 0 
+2b1237256000-2b1237456000 rw-p 00000000 00:00 0 
+2b1237456000-2b123f456000 rw-p 00000000 00:00 0 
+2b123f456000-2b123f457000 ---p 00000000 00:00 0 
+2b123f457000-2b123f657000 rw-p 00000000 00:00 0 
+2b123f657000-2b1247657000 rw-p 00000000 00:00 0 
+2b1247657000-2b1247658000 ---p 00000000 00:00 0 
+2b1247658000-2b1247858000 rw-p 00000000 00:00 0 
+2b1247858000-2b1257858000 rw-p 00000000 00:00 0 
+2b1257858000-2b1257859000 ---p 00000000 00:00 0 
+2b1257859000-2b1257a59000 rw-p 00000000 00:00 0 
+2b1257a59000-2b1257a5a000 ---p 00000000 00:00 0 
+2b1257a5a000-2b1257c5a000 rw-p 00000000 00:00 0 
+2b1257c5a000-2b1257c5b000 ---p 00000000 00:00 0 
+2b1257c5b000-2b1257e5b000 rw-p 00000000 00:00 0 
+2b1257e5b000-2b125fe5b000 rw-p 00000000 00:00 0 
+2b125fe5b000-2b125fe5c000 ---p 00000000 00:00 0 
+2b125fe5c000-2b126005c000 rw-p 00000000 00:00 0 
+2b126005c000-2b127005c000 rw-p 00000000 00:00 0 
+2b127005c000-2b127005d000 ---p 00000000 00:00 0 
+2b127005d000-2b127025d000 rw-p 00000000 00:00 0 
+2b127025d000-2b128025d000 rw-p 00000000 00:00 0 
+2b128025d000-2b128025e000 ---p 00000000 00:00 0 
+2b128025e000-2b128045e000 rw-p 00000000 00:00 0 
+2b128045e000-2b128845e000 rw-p 00000000 00:00 0 
+2b128845e000-2b128845f000 ---p 00000000 00:00 0 
+2b128845f000-2b128865f000 rw-p 00000000 00:00 0 
+2b128865f000-2b129865f000 rw-p 00000000 00:00 0 
+2b129865f000-2b129869f000 rw-p 00000000 00:00 0 
+2b129869f000-2b12986a9000 r-xp 00000000 08:03 1844520                    /usr/lib64/python3.6/lib-dynload/math.cpython-36m-x86_64-linux-gnu.so
+2b12986a9000-2b12988a8000 ---p 0000a000 08:03 1844520                    /usr/lib64/python3.6/lib-dynload/math.cpython-36m-x86_64-linux-gnu.so
+2b12988a8000-2b12988a9000 r--p 00009000 08:03 1844520                    /usr/lib64/python3.6/lib-dynload/math.cpython-36m-x86_64-linux-gnu.so
+2b12988a9000-2b12988ab000 rw-p 0000a000 08:03 1844520                    /usr/lib64/python3.6/lib-dynload/math.cpython-36m-x86_64-linux-gnu.so
+2b12988ab000-2b12988c2000 r-xp 00000000 08:03 1844556                    /usr/lib64/python3.6/lib-dynload/_datetime.cpython-36m-x86_64-linux-gnu.so
+2b12988c2000-2b1298ac2000 ---p 00017000 08:03 1844556                    /usr/lib64/python3.6/lib-dynload/_datetime.cpython-36m-x86_64-linux-gnu.so
+2b1298ac2000-2b1298ac3000 r--p 00017000 08:03 1844556                    /usr/lib64/python3.6/lib-dynload/_datetime.cpython-36m-x86_64-linux-gnu.so
+2b1298ac3000-2b1298ac6000 rw-p 00018000 08:03 1844556                    /usr/lib64/python3.6/lib-dynload/_datetime.cpython-36m-x86_64-linux-gnu.so
+2b1298ac6000-2b1298b06000 rw-p 00000000 00:00 0 
+2b1298b0f000-2b1298b8f000 rw-p 00000000 00:00 0 
+2b1298b8f000-2b1298b98000 r-xp 00000000 08:03 1844542                    /usr/lib64/python3.6/lib-dynload/_struct.cpython-36m-x86_64-linux-gnu.so
+2b1298b98000-2b1298d97000 ---p 00009000 08:03 1844542                    /usr/lib64/python3.6/lib-dynload/_struct.cpython-36m-x86_64-linux-gnu.so
+2b1298d97000-2b1298d98000 r--p 00008000 08:03 1844542                    /usr/lib64/python3.6/lib-dynload/_struct.cpython-36m-x86_64-linux-gnu.so
+2b1298d98000-2b1298d9a000 rw-p 00009000 08:03 1844542                    /usr/lib64/python3.6/lib-dynload/_struct.cpython-36m-x86_64-linux-gnu.so
+2b1298d9a000-2b1298db6000 r-xp 00000000 08:03 1844550                    /usr/lib64/python3.6/lib-dynload/_pickle.cpython-36m-x86_64-linux-gnu.so
+2b1298db6000-2b1298fb5000 ---p 0001c000 08:03 1844550                    /usr/lib64/python3.6/lib-dynload/_pickle.cpython-36m-x86_64-linux-gnu.so
+2b1298fb5000-2b1298fb6000 r--p 0001b000 08:03 1844550                    /usr/lib64/python3.6/lib-dynload/_pickle.cpython-36m-x86_64-linux-gnu.so
+2b1298fb6000-2b1298fba000 rw-p 0001c000 08:03 1844550                    /usr/lib64/python3.6/lib-dynload/_pickle.cpython-36m-x86_64-linux-gnu.so
+2b1298fba000-2b12990ba000 rw-p 00000000 00:00 0 
+2b12990e5000-2b1299125000 rw-p 00000000 00:00 0 
+2b1299125000-2b1299145000 r-xp 00000000 00:30 9258328054125347904        /u/home/a/amandawe/.local/lib/python3.6/site-packages/numpy/core/_multiarray_tests.cpython-36m-x86_64-linux-gnu.so
+2b1299145000-2b1299344000 ---p 00020000 00:30 9258328054125347904        /u/home/a/amandawe/.local/lib/python3.6/site-packages/numpy/core/_multiarray_tests.cpython-36m-x86_64-linux-gnu.so
+2b1299344000-2b1299346000 rw-p 0001f000 00:30 9258328054125347904        /u/home/a/amandawe/.local/lib/python3.6/site-packages/numpy/core/_multiarray_tests.cpython-36m-x86_64-linux-gnu.so
+2b1299346000-2b1299386000 rw-p 00000000 00:00 0 
+2b1299386000-2b1299389000 r-xp 00000000 08:03 1844560                    /usr/lib64/python3.6/lib-dynload/_posixsubprocess.cpython-36m-x86_64-linux-gnu.so
+2b1299389000-2b1299588000 ---p 00003000 08:03 1844560                    /usr/lib64/python3.6/lib-dynload/_posixsubprocess.cpython-36m-x86_64-linux-gnu.so
+2b1299588000-2b1299589000 r--p 00002000 08:03 1844560                    /usr/lib64/python3.6/lib-dynload/_posixsubprocess.cpython-36m-x86_64-linux-gnu.so
+2b1299589000-2b129958a000 rw-p 00003000 08:03 1844560                    /usr/lib64/python3.6/lib-dynload/_posixsubprocess.cpython-36m-x86_64-linux-gnu.so
+2b129958a000-2b1299590000 r-xp 00000000 08:03 1844538                    /usr/lib64/python3.6/lib-dynload/select.cpython-36m-x86_64-linux-gnu.so
+2b1299590000-2b129978f000 ---p 00006000 08:03 1844538                    /usr/lib64/python3.6/lib-dynload/select.cpython-36m-x86_64-linux-gnu.so
+2b129978f000-2b1299790000 r--p 00005000 08:03 1844538                    /usr/lib64/python3.6/lib-dynload/select.cpython-36m-x86_64-linux-gnu.so
+2b1299790000-2b1299792000 rw-p 00006000 08:03 1844538                    /usr/lib64/python3.6/lib-dynload/select.cpython-36m-x86_64-linux-gnu.so
+2b1299792000-2b12997d2000 rw-p 00000000 00:00 0 
+2b12997d2000-2b12997ee000 r-xp 00000000 08:03 1844557                    /usr/lib64/python3.6/lib-dynload/_ctypes.cpython-36m-x86_64-linux-gnu.so
+2b12997ee000-2b12999ed000 ---p 0001c000 08:03 1844557                    /usr/lib64/python3.6/lib-dynload/_ctypes.cpython-36m-x86_64-linux-gnu.so
+2b12999ed000-2b12999ee000 r--p 0001b000 08:03 1844557                    /usr/lib64/python3.6/lib-dynload/_ctypes.cpython-36m-x86_64-linux-gnu.so
+2b12999ee000-2b12999f2000 rw-p 0001c000 08:03 1844557                    /usr/lib64/python3.6/lib-dynload/_ctypes.cpython-36m-x86_64-linux-gnu.so
+2b12999f2000-2b12999f9000 r-xp 00000000 00:33 9258327727716373876        /u/local/compilers/intel/2020.4/debugger_2020/python/intel64/lib/libffi.so.6
+2b12999f9000-2b1299bf9000 ---p 00007000 00:33 9258327727716373876        /u/local/compilers/intel/2020.4/debugger_2020/python/intel64/lib/libffi.so.6
+2b1299bf9000-2b1299bfa000 r--p 00007000 00:33 9258327727716373876        /u/local/compilers/intel/2020.4/debugger_2020/python/intel64/lib/libffi.so.6
+2b1299bfa000-2b1299bfb000 rw-p 00008000 00:33 9258327727716373876        /u/local/compilers/intel/2020.4/debugger_2020/python/intel64/lib/libffi.so.6
+2b1299bfb000-2b1299c3b000 rw-p 00000000 00:00 0 
+2b1299c3b000-2b1299c3f000 r-xp 00000000 00:30 9258328045545186097        /u/home/a/amandawe/.local/lib/python3.6/site-packages/numpy/linalg/lapack_lite.cpython-36m-x86_64-linux-gnu.so
+2b1299c3f000-2b1299e3f000 ---p 00004000 00:30 9258328045545186097        /u/home/a/amandawe/.local/lib/python3.6/site-packages/numpy/linalg/lapack_lite.cpython-36m-x86_64-linux-gnu.so
+2b1299e3f000-2b1299e40000 rw-p 00004000 00:30 9258328045545186097        /u/home/a/amandawe/.local/lib/python3.6/site-packages/numpy/linalg/lapack_lite.cpython-36m-x86_64-linux-gnu.so
+2b1299e40000-2b1299e42000 rw-p 00006000 00:30 9258328045545186097        /u/home/a/amandawe/.local/lib/python3.6/site-packages/numpy/linalg/lapack_lite.cpython-36m-x86_64-linux-gnu.so
+2b1299e42000-2b1299e6d000 r-xp 00000000 00:30 9258328045553882394        /u/home/a/amandawe/.local/lib/python3.6/site-packages/numpy/linalg/_umath_linalg.cpython-36m-x86_64-linux-gnu.so
+2b1299e6d000-2b129a06d000 ---p 0002b000 00:30 9258328045553882394        /u/home/a/amandawe/.local/lib/python3.6/site-packages/numpy/linalg/_umath_linalg.cpython-36m-x86_64-linux-gnu.so
+2b129a06d000-2b129a06f000 rw-p 0002b000 00:30 9258328045553882394        /u/home/a/amandawe/.local/lib/python3.6/site-packages/numpy/linalg/_umath_linalg.cpython-36m-x86_64-linux-gnu.so
+2b129a06f000-2b129a072000 rw-p 00033000 00:30 9258328045553882394        /u/home/a/amandawe/.local/lib/python3.6/site-packages/numpy/linalg/_umath_linalg.cpython-36m-x86_64-linux-gnu.so
+2b129a072000-2b129a132000 rw-p 00000000 00:00 0 
+2b129a132000-2b129a138000 r-xp 00000000 08:03 1844562                    /usr/lib64/python3.6/lib-dynload/zlib.cpython-36m-x86_64-linux-gnu.so
+2b129a138000-2b129a337000 ---p 00006000 08:03 1844562                    /usr/lib64/python3.6/lib-dynload/zlib.cpython-36m-x86_64-linux-gnu.so
+2b129a337000-2b129a338000 r--p 00005000 08:03 1844562                    /usr/lib64/python3.6/lib-dynload/zlib.cpython-36m-x86_64-linux-gnu.so
+2b129a338000-2b129a33a000 rw-p 00006000 08:03 1844562                    /usr/lib64/python3.6/lib-dynload/zlib.cpython-36m-x86_64-linux-gnu.so
+2b129a33a000-2b129a34f000 r-xp 00000000 08:03 934917                     /usr/lib64/libz.so.1.2.7
+2b129a34f000-2b129a54e000 ---p 00015000 08:03 934917                     /usr/lib64/libz.so.1.2.7
+2b129a54e000-2b129a54f000 r--p 00014000 08:03 934917                     /usr/lib64/libz.so.1.2.7
+2b129a54f000-2b129a550000 rw-p 00015000 08:03 934917                     /usr/lib64/libz.so.1.2.7
+2b129a550000-2b129a554000 r-xp 00000000 08:03 1844539                    /usr/lib64/python3.6/lib-dynload/_bz2.cpython-36m-x86_64-linux-gnu.so
+2b129a554000-2b129a753000 ---p 00004000 08:03 1844539                    /usr/lib64/python3.6/lib-dynload/_bz2.cpython-36m-x86_64-linux-gnu.so
+2b129a753000-2b129a754000 r--p 00003000 08:03 1844539                    /usr/lib64/python3.6/lib-dynload/_bz2.cpython-36m-x86_64-linux-gnu.so
+2b129a754000-2b129a755000 rw-p 00004000 08:03 1844539                    /usr/lib64/python3.6/lib-dynload/_bz2.cpython-36m-x86_64-linux-gnu.so
+2b129a755000-2b129a764000 r-xp 00000000 08:03 934288                     /usr/lib64/libbz2.so.1.0.6
+2b129a764000-2b129a963000 ---p 0000f000 08:03 934288                     /usr/lib64/libbz2.so.1.0.6
+2b129a963000-2b129a964000 r--p 0000e000 08:03 934288                     /usr/lib64/libbz2.so.1.0.6
+2b129a964000-2b129a965000 rw-p 0000f000 08:03 934288                     /usr/lib64/libbz2.so.1.0.6
+2b129a965000-2b129a96c000 r-xp 00000000 08:03 1844555                    /usr/lib64/python3.6/lib-dynload/_lzma.cpython-36m-x86_64-linux-gnu.so
+2b129a96c000-2b129ab6b000 ---p 00007000 08:03 1844555                    /usr/lib64/python3.6/lib-dynload/_lzma.cpython-36m-x86_64-linux-gnu.so
+2b129ab6b000-2b129ab6c000 r--p 00006000 08:03 1844555                    /usr/lib64/python3.6/lib-dynload/_lzma.cpython-36m-x86_64-linux-gnu.so
+2b129ab6c000-2b129ab6e000 rw-p 00007000 08:03 1844555                    /usr/lib64/python3.6/lib-dynload/_lzma.cpython-36m-x86_64-linux-gnu.so
+2b129ab6e000-2b129ab93000 r-xp 00000000 08:03 936169                     /usr/lib64/liblzma.so.5.2.2
+2b129ab93000-2b129ad92000 ---p 00025000 08:03 936169                     /usr/lib64/liblzma.so.5.2.2
+2b129ad92000-2b129ad93000 r--p 00024000 08:03 936169                     /usr/lib64/liblzma.so.5.2.2
+2b129ad93000-2b129ad94000 rw-p 00025000 08:03 936169                     /usr/lib64/liblzma.so.5.2.2
+2b129ad94000-2b129ad96000 r-xp 00000000 08:03 1844552                    /usr/lib64/python3.6/lib-dynload/grp.cpython-36m-x86_64-linux-gnu.so
+2b129ad96000-2b129af95000 ---p 00002000 08:03 1844552                    /usr/lib64/python3.6/lib-dynload/grp.cpython-36m-x86_64-linux-gnu.so
+2b129af95000-2b129af96000 r--p 00001000 08:03 1844552                    /usr/lib64/python3.6/lib-dynload/grp.cpython-36m-x86_64-linux-gnu.so
+2b129af96000-2b129af97000 rw-p 00002000 08:03 1844552                    /usr/lib64/python3.6/lib-dynload/grp.cpython-36m-x86_64-linux-gnu.so
+2b129af97000-2b129afd7000 rw-p 00000000 00:00 0 
+2b129afd7000-2b129b02c000 r-xp 00000000 08:03 1844569                    /usr/lib64/python3.6/lib-dynload/_decimal.cpython-36m-x86_64-linux-gnu.so
+2b129b02c000-2b129b22c000 ---p 00055000 08:03 1844569                    /usr/lib64/python3.6/lib-dynload/_decimal.cpython-36m-x86_64-linux-gnu.so
+2b129b22c000-2b129b22d000 r--p 00055000 08:03 1844569                    /usr/lib64/python3.6/lib-dynload/_decimal.cpython-36m-x86_64-linux-gnu.so
+2b129b22d000-2b129b236000 rw-p 00056000 08:03 1844569                    /usr/lib64/python3.6/lib-dynload/_decimal.cpython-36m-x86_64-linux-gnu.so
+2b129b236000-2b129b24b000 r-xp 00000000 00:30 9258328049834879425        /u/home/a/amandawe/.local/lib/python3.6/site-packages/numpy/fft/_pocketfft_internal.cpython-36m-x86_64-linux-gnu.so
+2b129b24b000-2b129b44a000 ---p 00015000 00:30 9258328049834879425        /u/home/a/amandawe/.local/lib/python3.6/site-packages/numpy/fft/_pocketfft_internal.cpython-36m-x86_64-linux-gnu.so
+2b129b44a000-2b129b44b000 rw-p 00014000 00:30 9258328049834879425        /u/home/a/amandawe/.local/lib/python3.6/site-packages/numpy/fft/_pocketfft_internal.cpython-36m-x86_64-linux-gnu.so
+2b129b44b000-2b129b4cb000 rw-p 00000000 00:00 0 
+2b129b4cb000-2b129b547000 r-xp 00000000 00:30 9258328062716770014        /u/home/a/amandawe/.local/lib/python3.6/site-packages/numpy/random/mtrand.cpython-36m-x86_64-linux-gnu.so
+2b129b547000-2b129b746000 ---p 0007c000 00:30 9258328062716770014        /u/home/a/amandawe/.local/lib/python3.6/site-packages/numpy/random/mtrand.cpython-36m-x86_64-linux-gnu.so
+2b129b746000-2b129b76c000 rw-p 0007b000 00:30 9258328062716770014        /u/home/a/amandawe/.local/lib/python3.6/site-packages/numpy/random/mtrand.cpython-36m-x86_64-linux-gnu.so
+2b129b76c000-2b129b76f000 rw-p 00000000 00:00 0 
+2b129b76f000-2b129b796000 r-xp 00000000 00:30 9258328062716770015        /u/home/a/amandawe/.local/lib/python3.6/site-packages/numpy/random/bit_generator.cpython-36m-x86_64-linux-gnu.so
+2b129b796000-2b129b995000 ---p 00027000 00:30 9258328062716770015        /u/home/a/amandawe/.local/lib/python3.6/site-packages/numpy/random/bit_generator.cpython-36m-x86_64-linux-gnu.so
+2b129b995000-2b129b99a000 rw-p 00026000 00:30 9258328062716770015        /u/home/a/amandawe/.local/lib/python3.6/site-packages/numpy/random/bit_generator.cpython-36m-x86_64-linux-gnu.so
+2b129b99a000-2b129b99b000 rw-p 00000000 00:00 0 
+2b129b99b000-2b129b9d6000 r-xp 00000000 00:30 9258328062716770024        /u/home/a/amandawe/.local/lib/python3.6/site-packages/numpy/random/_common.cpython-36m-x86_64-linux-gnu.so
+2b129b9d6000-2b129bbd5000 ---p 0003b000 00:30 9258328062716770024        /u/home/a/amandawe/.local/lib/python3.6/site-packages/numpy/random/_common.cpython-36m-x86_64-linux-gnu.so
+2b129bbd5000-2b129bbd8000 rw-p 0003a000 00:30 9258328062716770024        /u/home/a/amandawe/.local/lib/python3.6/site-packages/numpy/random/_common.cpython-36m-x86_64-linux-gnu.so
+2b129bbd8000-2b129bbd9000 rw-p 00000000 00:00 0 
+2b129bbd9000-2b129bbde000 r-xp 00000000 08:03 1844551                    /usr/lib64/python3.6/lib-dynload/binascii.cpython-36m-x86_64-linux-gnu.so
+2b129bbde000-2b129bddd000 ---p 00005000 08:03 1844551                    /usr/lib64/python3.6/lib-dynload/binascii.cpython-36m-x86_64-linux-gnu.so
+2b129bddd000-2b129bdde000 r--p 00004000 08:03 1844551                    /usr/lib64/python3.6/lib-dynload/binascii.cpython-36m-x86_64-linux-gnu.so
+2b129bdde000-2b129bddf000 rw-p 00005000 08:03 1844551                    /usr/lib64/python3.6/lib-dynload/binascii.cpython-36m-x86_64-linux-gnu.so
+2b129bddf000-2b129bde5000 r-xp 00000000 08:03 1844526                    /usr/lib64/python3.6/lib-dynload/_hashlib.cpython-36m-x86_64-linux-gnu.so
+2b129bde5000-2b129bfe4000 ---p 00006000 08:03 1844526                    /usr/lib64/python3.6/lib-dynload/_hashlib.cpython-36m-x86_64-linux-gnu.so
+2b129bfe4000-2b129bfe5000 r--p 00005000 08:03 1844526                    /usr/lib64/python3.6/lib-dynload/_hashlib.cpython-36m-x86_64-linux-gnu.so
+2b129bfe5000-2b129bfe6000 rw-p 00006000 08:03 1844526                    /usr/lib64/python3.6/lib-dynload/_hashlib.cpython-36m-x86_64-linux-gnu.so
+2b129bfe6000-2b129c04d000 r-xp 00000000 08:03 934801                     /usr/lib64/libssl.so.1.0.2k
+2b129c04d000-2b129c24d000 ---p 00067000 08:03 934801                     /usr/lib64/libssl.so.1.0.2k
+2b129c24d000-2b129c251000 r--p 00067000 08:03 934801                     /usr/lib64/libssl.so.1.0.2k
+2b129c251000-2b129c258000 rw-p 0006b000 08:03 934801                     /usr/lib64/libssl.so.1.0.2k
+2b129c258000-2b129c48e000 r-xp 00000000 08:03 936345                     /usr/lib64/libcrypto.so.1.0.2k
+2b129c48e000-2b129c68e000 ---p 00236000 08:03 936345                     /usr/lib64/libcrypto.so.1.0.2k
+2b129c68e000-2b129c6aa000 r--p 00236000 08:03 936345                     /usr/lib64/libcrypto.so.1.0.2k
+2b129c6aa000-2b129c6b7000 rw-p 00252000 08:03 936345                     /usr/lib64/libcrypto.so.1.0.2k
+2b129c6b7000-2b129c6bb000 rw-p 00000000 00:00 0 
+2b129c6bb000-2b129c705000 r-xp 00000000 08:03 936452                     /usr/lib64/libgssapi_krb5.so.2.2
+2b129c705000-2b129c905000 ---p 0004a000 08:03 936452                     /usr/lib64/libgssapi_krb5.so.2.2
+2b129c905000-2b129c906000 r--p 0004a000 08:03 936452                     /usr/lib64/libgssapi_krb5.so.2.2
+2b129c906000-2b129c908000 rw-p 0004b000 08:03 936452                     /usr/lib64/libgssapi_krb5.so.2.2
+2b129c908000-2b129c9e1000 r-xp 00000000 08:03 935666                     /usr/lib64/libkrb5.so.3.3
+2b129c9e1000-2b129cbe0000 ---p 000d9000 08:03 935666                     /usr/lib64/libkrb5.so.3.3
+2b129cbe0000-2b129cbee000 r--p 000d8000 08:03 935666                     /usr/lib64/libkrb5.so.3.3
+2b129cbee000-2b129cbf1000 rw-p 000e6000 08:03 935666                     /usr/lib64/libkrb5.so.3.3
+2b129cbf1000-2b129cbf4000 r-xp 00000000 08:03 935195                     /usr/lib64/libcom_err.so.2.1
+2b129cbf4000-2b129cdf3000 ---p 00003000 08:03 935195                     /usr/lib64/libcom_err.so.2.1
+2b129cdf3000-2b129cdf4000 r--p 00002000 08:03 935195                     /usr/lib64/libcom_err.so.2.1
+2b129cdf4000-2b129cdf5000 rw-p 00003000 08:03 935195                     /usr/lib64/libcom_err.so.2.1
+2b129cdf5000-2b129ce26000 r-xp 00000000 08:03 936749                     /usr/lib64/libk5crypto.so.3.1
+2b129ce26000-2b129d025000 ---p 00031000 08:03 936749                     /usr/lib64/libk5crypto.so.3.1
+2b129d025000-2b129d027000 r--p 00030000 08:03 936749                     /usr/lib64/libk5crypto.so.3.1
+2b129d027000-2b129d028000 rw-p 00032000 08:03 936749                     /usr/lib64/libk5crypto.so.3.1
+2b129d028000-2b129d036000 r-xp 00000000 08:03 934241                     /usr/lib64/libkrb5support.so.0.1
+2b129d036000-2b129d236000 ---p 0000e000 08:03 934241                     /usr/lib64/libkrb5support.so.0.1
+2b129d236000-2b129d237000 r--p 0000e000 08:03 934241                     /usr/lib64/libkrb5support.so.0.1
+2b129d237000-2b129d238000 rw-p 0000f000 08:03 934241                     /usr/lib64/libkrb5support.so.0.1
+2b129d238000-2b129d23b000 r-xp 00000000 08:03 934998                     /usr/lib64/libkeyutils.so.1.5
+2b129d23b000-2b129d43a000 ---p 00003000 08:03 934998                     /usr/lib64/libkeyutils.so.1.5
+2b129d43a000-2b129d43b000 r--p 00002000 08:03 934998                     /usr/lib64/libkeyutils.so.1.5
+2b129d43b000-2b129d43c000 rw-p 00003000 08:03 934998                     /usr/lib64/libkeyutils.so.1.5
+2b129d43c000-2b129d452000 r-xp 00000000 08:03 934933                     /usr/lib64/libresolv-2.17.so
+2b129d452000-2b129d652000 ---p 00016000 08:03 934933                     /usr/lib64/libresolv-2.17.so
+2b129d652000-2b129d653000 r--p 00016000 08:03 934933                     /usr/lib64/libresolv-2.17.so
+2b129d653000-2b129d654000 rw-p 00017000 08:03 934933                     /usr/lib64/libresolv-2.17.so
+2b129d654000-2b129d656000 rw-p 00000000 00:00 0 
+2b129d656000-2b129d67a000 r-xp 00000000 08:03 936242                     /usr/lib64/libselinux.so.1
+2b129d67a000-2b129d879000 ---p 00024000 08:03 936242                     /usr/lib64/libselinux.so.1
+2b129d879000-2b129d87a000 r--p 00023000 08:03 936242                     /usr/lib64/libselinux.so.1
+2b129d87a000-2b129d87b000 rw-p 00024000 08:03 936242                     /usr/lib64/libselinux.so.1
+2b129d87b000-2b129d87d000 rw-p 00000000 00:00 0 
+2b129d87d000-2b129d8dd000 r-xp 00000000 08:03 935774                     /usr/lib64/libpcre.so.1.2.0
+2b129d8dd000-2b129dadd000 ---p 00060000 08:03 935774                     /usr/lib64/libpcre.so.1.2.0
+2b129dadd000-2b129dade000 r--p 00060000 08:03 935774                     /usr/lib64/libpcre.so.1.2.0
+2b129dade000-2b129dadf000 rw-p 00061000 08:03 935774                     /usr/lib64/libpcre.so.1.2.0
+2b129dadf000-2b129dae8000 r-xp 00000000 08:03 1844529                    /usr/lib64/python3.6/lib-dynload/_blake2.cpython-36m-x86_64-linux-gnu.so
+2b129dae8000-2b129dce8000 ---p 00009000 08:03 1844529                    /usr/lib64/python3.6/lib-dynload/_blake2.cpython-36m-x86_64-linux-gnu.so
+2b129dce8000-2b129dce9000 r--p 00009000 08:03 1844529                    /usr/lib64/python3.6/lib-dynload/_blake2.cpython-36m-x86_64-linux-gnu.so
+2b129dce9000-2b129dcea000 rw-p 0000a000 08:03 1844529                    /usr/lib64/python3.6/lib-dynload/_blake2.cpython-36m-x86_64-linux-gnu.so
+2b129dcea000-2b129dd01000 r-xp 00000000 08:03 1844568                    /usr/lib64/python3.6/lib-dynload/_sha3.cpython-36m-x86_64-linux-gnu.so
+2b129dd01000-2b129df00000 ---p 00017000 08:03 1844568                    /usr/lib64/python3.6/lib-dynload/_sha3.cpython-36m-x86_64-linux-gnu.so
+2b129df00000-2b129df01000 r--p 00016000 08:03 1844568                    /usr/lib64/python3.6/lib-dynload/_sha3.cpython-36m-x86_64-linux-gnu.so
+2b129df01000-2b129df03000 rw-p 00017000 08:03 1844568                    /usr/lib64/python3.6/lib-dynload/_sha3.cpython-36m-x86_64-linux-gnu.so
+2b129df03000-2b129df06000 r-xp 00000000 08:03 1844521                    /usr/lib64/python3.6/lib-dynload/_hmacopenssl.cpython-36m-x86_64-linux-gnu.so
+2b129df06000-2b129e105000 ---p 00003000 08:03 1844521                    /usr/lib64/python3.6/lib-dynload/_hmacopenssl.cpython-36m-x86_64-linux-gnu.so
+2b129e105000-2b129e106000 r--p 00002000 08:03 1844521                    /usr/lib64/python3.6/lib-dynload/_hmacopenssl.cpython-36m-x86_64-linux-gnu.so
+2b129e106000-2b129e107000 rw-p 00003000 08:03 1844521                    /usr/lib64/python3.6/lib-dynload/_hmacopenssl.cpython-36m-x86_64-linux-gnu.so
+2b129e107000-2b129e187000 rw-p 00000000 00:00 0 
+2b129e198000-2b129e19a000 r-xp 00000000 08:03 1844577                    /usr/lib64/python3.6/lib-dynload/_bisect.cpython-36m-x86_64-linux-gnu.so
+2b129e19a000-2b129e399000 ---p 00002000 08:03 1844577                    /usr/lib64/python3.6/lib-dynload/_bisect.cpython-36m-x86_64-linux-gnu.so
+2b129e399000-2b129e39a000 r--p 00001000 08:03 1844577                    /usr/lib64/python3.6/lib-dynload/_bisect.cpython-36m-x86_64-linux-gnu.so
+2b129e39a000-2b129e39b000 rw-p 00002000 08:03 1844577                    /usr/lib64/python3.6/lib-dynload/_bisect.cpython-36m-x86_64-linux-gnu.so
+2b129e39b000-2b129e39f000 r-xp 00000000 08:03 1844566                    /usr/lib64/python3.6/lib-dynload/_random.cpython-36m-x86_64-linux-gnu.so
+2b129e39f000-2b129e59e000 ---p 00004000 08:03 1844566                    /usr/lib64/python3.6/lib-dynload/_random.cpython-36m-x86_64-linux-gnu.so
+2b129e59e000-2b129e59f000 r--p 00003000 08:03 1844566                    /usr/lib64/python3.6/lib-dynload/_random.cpython-36m-x86_64-linux-gnu.so
+2b129e59f000-2b129e5a0000 rw-p 00004000 08:03 1844566                    /usr/lib64/python3.6/lib-dynload/_random.cpython-36m-x86_64-linux-gnu.so
+2b129e5a0000-2b129e5f5000 r-xp 00000000 00:30 9258328062716770013        /u/home/a/amandawe/.local/lib/python3.6/site-packages/numpy/random/_bounded_integers.cpython-36m-x86_64-linux-gnu.so
+2b129e5f5000-2b129e7f4000 ---p 00055000 00:30 9258328062716770013        /u/home/a/amandawe/.local/lib/python3.6/site-packages/numpy/random/_bounded_integers.cpython-36m-x86_64-linux-gnu.so
+2b129e7f4000-2b129e7f6000 rw-p 00054000 00:30 9258328062716770013        /u/home/a/amandawe/.local/lib/python3.6/site-packages/numpy/random/_bounded_integers.cpython-36m-x86_64-linux-gnu.so
+2b129e7f6000-2b129e7f8000 rw-p 00000000 00:00 0 
+2b129e7f8000-2b129e80b000 r-xp 00000000 00:30 9258328062716770016        /u/home/a/amandawe/.local/lib/python3.6/site-packages/numpy/random/_mt19937.cpython-36m-x86_64-linux-gnu.so
+2b129e80b000-2b129ea0b000 ---p 00013000 00:30 9258328062716770016        /u/home/a/amandawe/.local/lib/python3.6/site-packages/numpy/random/_mt19937.cpython-36m-x86_64-linux-gnu.so
+2b129ea0b000-2b129ea0d000 rw-p 00013000 00:30 9258328062716770016        /u/home/a/amandawe/.local/lib/python3.6/site-packages/numpy/random/_mt19937.cpython-36m-x86_64-linux-gnu.so
+2b129ea0d000-2b129ea0e000 rw-p 00000000 00:00 0 
+2b129ea0e000-2b129ea1f000 r-xp 00000000 00:30 9258328062729390830        /u/home/a/amandawe/.local/lib/python3.6/site-packages/numpy/random/_philox.cpython-36m-x86_64-linux-gnu.so
+2b129ea1f000-2b129ec1e000 ---p 00011000 00:30 9258328062729390830        /u/home/a/amandawe/.local/lib/python3.6/site-packages/numpy/random/_philox.cpython-36m-x86_64-linux-gnu.so
+2b129ec1e000-2b129ec20000 rw-p 00010000 00:30 9258328062729390830        /u/home/a/amandawe/.local/lib/python3.6/site-packages/numpy/random/_philox.cpython-36m-x86_64-linux-gnu.so
+2b129ec20000-2b129ec21000 rw-p 00000000 00:00 0 
+2b129ec21000-2b129ec2f000 r-xp 00000000 00:30 9258328062716770018        /u/home/a/amandawe/.local/lib/python3.6/site-packages/numpy/random/_pcg64.cpython-36m-x86_64-linux-gnu.so
+2b129ec2f000-2b129ee2f000 ---p 0000e000 00:30 9258328062716770018        /u/home/a/amandawe/.local/lib/python3.6/site-packages/numpy/random/_pcg64.cpython-36m-x86_64-linux-gnu.so
+2b129ee2f000-2b129ee31000 rw-p 0000e000 00:30 9258328062716770018        /u/home/a/amandawe/.local/lib/python3.6/site-packages/numpy/random/_pcg64.cpython-36m-x86_64-linux-gnu.so
+2b129ee31000-2b129ee3c000 r-xp 00000000 00:30 9258328062716770023        /u/home/a/amandawe/.local/lib/python3.6/site-packages/numpy/random/_sfc64.cpython-36m-x86_64-linux-gnu.so
+2b129ee3c000-2b129f03b000 ---p 0000b000 00:30 9258328062716770023        /u/home/a/amandawe/.local/lib/python3.6/site-packages/numpy/random/_sfc64.cpython-36m-x86_64-linux-gnu.so
+2b129f03b000-2b129f03d000 rw-p 0000a000 00:30 9258328062716770023        /u/home/a/amandawe/.local/lib/python3.6/site-packages/numpy/random/_sfc64.cpython-36m-x86_64-linux-gnu.so
+2b129f03d000-2b129f0d7000 r-xp 00000000 00:30 9258328062714082988        /u/home/a/amandawe/.local/lib/python3.6/site-packages/numpy/random/_generator.cpython-36m-x86_64-linux-gnu.so
+2b129f0d7000-2b129f2d7000 ---p 0009a000 00:30 9258328062714082988        /u/home/a/amandawe/.local/lib/python3.6/site-packages/numpy/random/_generator.cpython-36m-x86_64-linux-gnu.so
+2b129f2d7000-2b129f2fb000 rw-p 0009a000 00:30 9258328062714082988        /u/home/a/amandawe/.local/lib/python3.6/site-packages/numpy/random/_generator.cpython-36m-x86_64-linux-gnu.so
+2b129f2fb000-2b129f47e000 rw-p 00000000 00:00 0 
+2b129f47e000-2b129f484000 r-xp 00000000 08:03 1844531                    /usr/lib64/python3.6/lib-dynload/_csv.cpython-36m-x86_64-linux-gnu.so
+2b129f484000-2b129f683000 ---p 00006000 08:03 1844531                    /usr/lib64/python3.6/lib-dynload/_csv.cpython-36m-x86_64-linux-gnu.so
+2b129f683000-2b129f684000 r--p 00005000 08:03 1844531                    /usr/lib64/python3.6/lib-dynload/_csv.cpython-36m-x86_64-linux-gnu.so
+2b129f684000-2b129f686000 rw-p 00006000 08:03 1844531                    /usr/lib64/python3.6/lib-dynload/_csv.cpython-36m-x86_64-linux-gnu.so
+2b129f686000-2b129f746000 rw-p 00000000 00:00 0 
+2b129f746000-2b129f850000 r-xp 00000000 00:30 9258328045553876817        /u/home/a/amandawe/.local/lib/python3.6/site-packages/pandas/_libs/interval.cpython-36m-x86_64-linux-gnu.so
+2b129f850000-2b129fa4f000 ---p 0010a000 00:30 9258328045553876817        /u/home/a/amandawe/.local/lib/python3.6/site-packages/pandas/_libs/interval.cpython-36m-x86_64-linux-gnu.so
+2b129fa4f000-2b129fa5d000 rw-p 00109000 00:30 9258328045553876817        /u/home/a/amandawe/.local/lib/python3.6/site-packages/pandas/_libs/interval.cpython-36m-x86_64-linux-gnu.so
+2b129fa5d000-2b129fa5f000 rw-p 00000000 00:00 0 
+2b129fa5f000-2b129fae1000 r-xp 00000000 00:30 9258328045532935674        /u/home/a/amandawe/.local/lib/python3.6/site-packages/pandas/_libs/hashtable.cpython-36m-x86_64-linux-gnu.so
+2b129fae1000-2b129fce0000 ---p 00082000 00:30 9258328045532935674        /u/home/a/amandawe/.local/lib/python3.6/site-packages/pandas/_libs/hashtable.cpython-36m-x86_64-linux-gnu.so
+2b129fce0000-2b129fcec000 rw-p 00081000 00:30 9258328045532935674        /u/home/a/amandawe/.local/lib/python3.6/site-packages/pandas/_libs/hashtable.cpython-36m-x86_64-linux-gnu.so
+2b129fcec000-2b129fcee000 rw-p 00000000 00:00 0 
+2b129fcee000-2b129fd16000 r-xp 00000000 00:30 9258328045532935671        /u/home/a/amandawe/.local/lib/python3.6/site-packages/pandas/_libs/missing.cpython-36m-x86_64-linux-gnu.so
+2b129fd16000-2b129ff15000 ---p 00028000 00:30 9258328045532935671        /u/home/a/amandawe/.local/lib/python3.6/site-packages/pandas/_libs/missing.cpython-36m-x86_64-linux-gnu.so
+2b129ff15000-2b129ff1a000 rw-p 00027000 00:30 9258328045532935671        /u/home/a/amandawe/.local/lib/python3.6/site-packages/pandas/_libs/missing.cpython-36m-x86_64-linux-gnu.so
+2b129ff1a000-2b129ff1b000 rw-p 00000000 00:00 0 
+2b129ff1b000-2b129ff32000 r-xp 00000000 00:30 9258328045554109336        /u/home/a/amandawe/.local/lib/python3.6/site-packages/pandas/_libs/tslibs/dtypes.cpython-36m-x86_64-linux-gnu.so
+2b129ff32000-2b12a0131000 ---p 00017000 00:30 9258328045554109336        /u/home/a/amandawe/.local/lib/python3.6/site-packages/pandas/_libs/tslibs/dtypes.cpython-36m-x86_64-linux-gnu.so
+2b12a0131000-2b12a0135000 rw-p 00016000 00:30 9258328045554109336        /u/home/a/amandawe/.local/lib/python3.6/site-packages/pandas/_libs/tslibs/dtypes.cpython-36m-x86_64-linux-gnu.so
+2b12a0135000-2b12a0176000 rw-p 00000000 00:00 0 
+2b12a0176000-2b12a01b8000 r-xp 00000000 00:30 9258328045542542153        /u/home/a/amandawe/.local/lib/python3.6/site-packages/pandas/_libs/tslibs/conversion.cpython-36m-x86_64-linux-gnu.so
+2b12a01b8000-2b12a03b8000 ---p 00042000 00:30 9258328045542542153        /u/home/a/amandawe/.local/lib/python3.6/site-packages/pandas/_libs/tslibs/conversion.cpython-36m-x86_64-linux-gnu.so
+2b12a03b8000-2b12a03bd000 rw-p 00042000 00:30 9258328045542542153        /u/home/a/amandawe/.local/lib/python3.6/site-packages/pandas/_libs/tslibs/conversion.cpython-36m-x86_64-linux-gnu.so
+2b12a03bd000-2b12a03be000 rw-p 00000000 00:00 0 
+2b12a03be000-2b12a03c6000 r-xp 00000000 00:30 9258328045542542151        /u/home/a/amandawe/.local/lib/python3.6/site-packages/pandas/_libs/tslibs/base.cpython-36m-x86_64-linux-gnu.so
+2b12a03c6000-2b12a05c6000 ---p 00008000 00:30 9258328045542542151        /u/home/a/amandawe/.local/lib/python3.6/site-packages/pandas/_libs/tslibs/base.cpython-36m-x86_64-linux-gnu.so
+2b12a05c6000-2b12a05c7000 rw-p 00008000 00:30 9258328045542542151        /u/home/a/amandawe/.local/lib/python3.6/site-packages/pandas/_libs/tslibs/base.cpython-36m-x86_64-linux-gnu.so
+2b12a05c7000-2b12a05ee000 r-xp 00000000 00:30 9258328045554109339        /u/home/a/amandawe/.local/lib/python3.6/site-packages/pandas/_libs/tslibs/nattype.cpython-36m-x86_64-linux-gnu.so
+2b12a05ee000-2b12a07ee000 ---p 00027000 00:30 9258328045554109339        /u/home/a/amandawe/.local/lib/python3.6/site-packages/pandas/_libs/tslibs/nattype.cpython-36m-x86_64-linux-gnu.so
+2b12a07ee000-2b12a07f3000 rw-p 00027000 00:30 9258328045554109339        /u/home/a/amandawe/.local/lib/python3.6/site-packages/pandas/_libs/tslibs/nattype.cpython-36m-x86_64-linux-gnu.so
+2b12a07f3000-2b12a07f4000 rw-p 00000000 00:00 0 
+2b12a07f4000-2b12a07ff000 r-xp 00000000 00:30 9258328045554109341        /u/home/a/amandawe/.local/lib/python3.6/site-packages/pandas/_libs/tslibs/np_datetime.cpython-36m-x86_64-linux-gnu.so
+2b12a07ff000-2b12a09ff000 ---p 0000b000 00:30 9258328045554109341        /u/home/a/amandawe/.local/lib/python3.6/site-packages/pandas/_libs/tslibs/np_datetime.cpython-36m-x86_64-linux-gnu.so
+2b12a09ff000-2b12a0a00000 rw-p 0000b000 00:30 9258328045554109341        /u/home/a/amandawe/.local/lib/python3.6/site-packages/pandas/_libs/tslibs/np_datetime.cpython-36m-x86_64-linux-gnu.so
+2b12a0a00000-2b12a0a34000 r-xp 00000000 00:30 9258328045554109343        /u/home/a/amandawe/.local/lib/python3.6/site-packages/pandas/_libs/tslibs/timezones.cpython-36m-x86_64-linux-gnu.so
+2b12a0a34000-2b12a0c34000 ---p 00034000 00:30 9258328045554109343        /u/home/a/amandawe/.local/lib/python3.6/site-packages/pandas/_libs/tslibs/timezones.cpython-36m-x86_64-linux-gnu.so
+2b12a0c34000-2b12a0c38000 rw-p 00034000 00:30 9258328045554109343        /u/home/a/amandawe/.local/lib/python3.6/site-packages/pandas/_libs/tslibs/timezones.cpython-36m-x86_64-linux-gnu.so
+2b12a0c38000-2b12a0c79000 rw-p 00000000 00:00 0 
+2b12a0c79000-2b12a0cc0000 r-xp 00000000 00:30 9258328045554109338        /u/home/a/amandawe/.local/lib/python3.6/site-packages/pandas/_libs/tslibs/tzconversion.cpython-36m-x86_64-linux-gnu.so
+2b12a0cc0000-2b12a0ebf000 ---p 00047000 00:30 9258328045554109338        /u/home/a/amandawe/.local/lib/python3.6/site-packages/pandas/_libs/tslibs/tzconversion.cpython-36m-x86_64-linux-gnu.so
+2b12a0ebf000-2b12a0ec4000 rw-p 00046000 00:30 9258328045554109338        /u/home/a/amandawe/.local/lib/python3.6/site-packages/pandas/_libs/tslibs/tzconversion.cpython-36m-x86_64-linux-gnu.so
+2b12a0ec4000-2b12a0ec5000 rw-p 00000000 00:00 0 
+2b12a0ec5000-2b12a0ed1000 r-xp 00000000 00:30 9258328045542542155        /u/home/a/amandawe/.local/lib/python3.6/site-packages/pandas/_libs/tslibs/ccalendar.cpython-36m-x86_64-linux-gnu.so
+2b12a0ed1000-2b12a10d0000 ---p 0000c000 00:30 9258328045542542155        /u/home/a/amandawe/.local/lib/python3.6/site-packages/pandas/_libs/tslibs/ccalendar.cpython-36m-x86_64-linux-gnu.so
+2b12a10d0000-2b12a10d2000 rw-p 0000b000 00:30 9258328045542542155        /u/home/a/amandawe/.local/lib/python3.6/site-packages/pandas/_libs/tslibs/ccalendar.cpython-36m-x86_64-linux-gnu.so
+2b12a10d2000-2b12a10d3000 rw-p 00000000 00:00 0 
+2b12a10d3000-2b12a1132000 r-xp 00000000 00:30 9258328045542542150        /u/home/a/amandawe/.local/lib/python3.6/site-packages/pandas/_libs/tslibs/parsing.cpython-36m-x86_64-linux-gnu.so
+2b12a1132000-2b12a1332000 ---p 0005f000 00:30 9258328045542542150        /u/home/a/amandawe/.local/lib/python3.6/site-packages/pandas/_libs/tslibs/parsing.cpython-36m-x86_64-linux-gnu.so
+2b12a1332000-2b12a133a000 rw-p 0005f000 00:30 9258328045542542150        /u/home/a/amandawe/.local/lib/python3.6/site-packages/pandas/_libs/tslibs/parsing.cpython-36m-x86_64-linux-gnu.so
+2b12a133a000-2b12a133c000 rw-p 00000000 00:00 0 
+2b12a133c000-2b12a1420000 r-xp 00000000 00:30 9258328045554109335        /u/home/a/amandawe/.local/lib/python3.6/site-packages/pandas/_libs/tslibs/offsets.cpython-36m-x86_64-linux-gnu.so
+2b12a1420000-2b12a1620000 ---p 000e4000 00:30 9258328045554109335        /u/home/a/amandawe/.local/lib/python3.6/site-packages/pandas/_libs/tslibs/offsets.cpython-36m-x86_64-linux-gnu.so
+2b12a1620000-2b12a1633000 rw-p 000e4000 00:30 9258328045554109335        /u/home/a/amandawe/.local/lib/python3.6/site-packages/pandas/_libs/tslibs/offsets.cpython-36m-x86_64-linux-gnu.so
+2b12a1633000-2b12a1638000 rw-p 00000000 00:00 0 
+2b12a1638000-2b12a169d000 r-xp 00000000 00:30 9258328045554109340        /u/home/a/amandawe/.local/lib/python3.6/site-packages/pandas/_libs/tslibs/timedeltas.cpython-36m-x86_64-linux-gnu.so
+2b12a169d000-2b12a189c000 ---p 00065000 00:30 9258328045554109340        /u/home/a/amandawe/.local/lib/python3.6/site-packages/pandas/_libs/tslibs/timedeltas.cpython-36m-x86_64-linux-gnu.so
+2b12a189c000-2b12a18a5000 rw-p 00064000 00:30 9258328045554109340        /u/home/a/amandawe/.local/lib/python3.6/site-packages/pandas/_libs/tslibs/timedeltas.cpython-36m-x86_64-linux-gnu.so
+2b12a18a5000-2b12a18e7000 rw-p 00000000 00:00 0 
+2b12a18e7000-2b12a194c000 r-xp 00000000 00:30 9258328045554109337        /u/home/a/amandawe/.local/lib/python3.6/site-packages/pandas/_libs/tslibs/timestamps.cpython-36m-x86_64-linux-gnu.so
+2b12a194c000-2b12a1b4b000 ---p 00065000 00:30 9258328045554109337        /u/home/a/amandawe/.local/lib/python3.6/site-packages/pandas/_libs/tslibs/timestamps.cpython-36m-x86_64-linux-gnu.so
+2b12a1b4b000-2b12a1b55000 rw-p 00064000 00:30 9258328045554109337        /u/home/a/amandawe/.local/lib/python3.6/site-packages/pandas/_libs/tslibs/timestamps.cpython-36m-x86_64-linux-gnu.so
+2b12a1b55000-2b12a1b58000 rw-p 00000000 00:00 0 
+2b12a1b58000-2b12a1b94000 r-xp 00000000 00:30 9258328045554109334        /u/home/a/amandawe/.local/lib/python3.6/site-packages/pandas/_libs/tslibs/fields.cpython-36m-x86_64-linux-gnu.so
+2b12a1b94000-2b12a1d93000 ---p 0003c000 00:30 9258328045554109334        /u/home/a/amandawe/.local/lib/python3.6/site-packages/pandas/_libs/tslibs/fields.cpython-36m-x86_64-linux-gnu.so
+2b12a1d93000-2b12a1d98000 rw-p 0003b000 00:30 9258328045554109334        /u/home/a/amandawe/.local/lib/python3.6/site-packages/pandas/_libs/tslibs/fields.cpython-36m-x86_64-linux-gnu.so
+2b12a1d98000-2b12a1d99000 rw-p 00000000 00:00 0 
+2b12a1d99000-2b12a1df4000 r-xp 00000000 00:30 9258328045542542152        /u/home/a/amandawe/.local/lib/python3.6/site-packages/pandas/_libs/tslibs/strptime.cpython-36m-x86_64-linux-gnu.so
+2b12a1df4000-2b12a1ff3000 ---p 0005b000 00:30 9258328045542542152        /u/home/a/amandawe/.local/lib/python3.6/site-packages/pandas/_libs/tslibs/strptime.cpython-36m-x86_64-linux-gnu.so
+2b12a1ff3000-2b12a1ffa000 rw-p 0005a000 00:30 9258328045542542152        /u/home/a/amandawe/.local/lib/python3.6/site-packages/pandas/_libs/tslibs/strptime.cpython-36m-x86_64-linux-gnu.so
+2b12a1ffa000-2b12a203d000 rw-p 00000000 00:00 0 
+2b12a203d000-2b12a2049000 r-xp 00000000 00:30 9258328045553876816        /u/home/a/amandawe/.local/lib/python3.6/site-packages/pandas/_libs/properties.cpython-36m-x86_64-linux-gnu.so
+2b12a2049000-2b12a2249000 ---p 0000c000 00:30 9258328045553876816        /u/home/a/amandawe/.local/lib/python3.6/site-packages/pandas/_libs/properties.cpython-36m-x86_64-linux-gnu.so
+2b12a2249000-2b12a224b000 rw-p 0000c000 00:30 9258328045553876816        /u/home/a/amandawe/.local/lib/python3.6/site-packages/pandas/_libs/properties.cpython-36m-x86_64-linux-gnu.so
+2b12a224b000-2b12a228b000 rw-p 00000000 00:00 0 
+2b12a228b000-2b12a22e9000 r-xp 00000000 00:30 9258328045554109344        /u/home/a/amandawe/.local/lib/python3.6/site-packages/pandas/_libs/tslibs/period.cpython-36m-x86_64-linux-gnu.so
+2b12a22e9000-2b12a24e9000 ---p 0005e000 00:30 9258328045554109344        /u/home/a/amandawe/.local/lib/python3.6/site-packages/pandas/_libs/tslibs/period.cpython-36m-x86_64-linux-gnu.so
+2b12a24e9000-2b12a24f2000 rw-p 0005e000 00:30 9258328045554109344        /u/home/a/amandawe/.local/lib/python3.6/site-packages/pandas/_libs/tslibs/period.cpython-36m-x86_64-linux-gnu.so
+2b12a24f2000-2b12a24f4000 rw-p 00000000 00:00 0 
+2b12a24f4000-2b12a2527000 r-xp 00000000 00:30 9258328045554109342        /u/home/a/amandawe/.local/lib/python3.6/site-packages/pandas/_libs/tslibs/vectorized.cpython-36m-x86_64-linux-gnu.so
+2b12a2527000-2b12a2727000 ---p 00033000 00:30 9258328045554109342        /u/home/a/amandawe/.local/lib/python3.6/site-packages/pandas/_libs/tslibs/vectorized.cpython-36m-x86_64-linux-gnu.so
+2b12a2727000-2b12a272b000 rw-p 00033000 00:30 9258328045554109342        /u/home/a/amandawe/.local/lib/python3.6/site-packages/pandas/_libs/tslibs/vectorized.cpython-36m-x86_64-linux-gnu.so
+2b12a272b000-2b12a272c000 rw-p 00000000 00:00 0 
+2b12a272c000-2b12a2737000 r-xp 00000000 00:30 9258328045532935673        /u/home/a/amandawe/.local/lib/python3.6/site-packages/pandas/_libs/ops_dispatch.cpython-36m-x86_64-linux-gnu.so
+2b12a2737000-2b12a2936000 ---p 0000b000 00:30 9258328045532935673        /u/home/a/amandawe/.local/lib/python3.6/site-packages/pandas/_libs/ops_dispatch.cpython-36m-x86_64-linux-gnu.so
+2b12a2936000-2b12a2938000 rw-p 0000a000 00:30 9258328045532935673        /u/home/a/amandawe/.local/lib/python3.6/site-packages/pandas/_libs/ops_dispatch.cpython-36m-x86_64-linux-gnu.so
+2b12a2938000-2b12a2a85000 r-xp 00000000 00:30 9258328045553876811        /u/home/a/amandawe/.local/lib/python3.6/site-packages/pandas/_libs/algos.cpython-36m-x86_64-linux-gnu.so
+2b12a2a85000-2b12a2c85000 ---p 0014d000 00:30 9258328045553876811        /u/home/a/amandawe/.local/lib/python3.6/site-packages/pandas/_libs/algos.cpython-36m-x86_64-linux-gnu.so
+2b12a2c85000-2b12a2c91000 rw-p 0014d000 00:30 9258328045553876811        /u/home/a/amandawe/.local/lib/python3.6/site-packages/pandas/_libs/algos.cpython-36m-x86_64-linux-gnu.so
+2b12a2c91000-2b12a2c96000 rw-p 00000000 00:00 0 
+2b12a2c96000-2b12a2d12000 r-xp 00000000 00:30 9258328045553876813        /u/home/a/amandawe/.local/lib/python3.6/site-packages/pandas/_libs/lib.cpython-36m-x86_64-linux-gnu.so
+2b12a2d12000-2b12a2f12000 ---p 0007c000 00:30 9258328045553876813        /u/home/a/amandawe/.local/lib/python3.6/site-packages/pandas/_libs/lib.cpython-36m-x86_64-linux-gnu.so
+2b12a2f12000-2b12a2f1f000 rw-p 0007c000 00:30 9258328045553876813        /u/home/a/amandawe/.local/lib/python3.6/site-packages/pandas/_libs/lib.cpython-36m-x86_64-linux-gnu.so
+2b12a2f1f000-2b12a2f22000 rw-p 00000000 00:00 0 
+2b12a2f22000-2b12a2f49000 r-xp 00000000 00:30 9258328045532935672        /u/home/a/amandawe/.local/lib/python3.6/site-packages/pandas/_libs/tslib.cpython-36m-x86_64-linux-gnu.so
+2b12a2f49000-2b12a3149000 ---p 00027000 00:30 9258328045532935672        /u/home/a/amandawe/.local/lib/python3.6/site-packages/pandas/_libs/tslib.cpython-36m-x86_64-linux-gnu.so
+2b12a3149000-2b12a314c000 rw-p 00027000 00:30 9258328045532935672        /u/home/a/amandawe/.local/lib/python3.6/site-packages/pandas/_libs/tslib.cpython-36m-x86_64-linux-gnu.so
+2b12a314c000-2b12a320d000 rw-p 00000000 00:00 0 
+2b12a320d000-2b12a320e000 r-xp 00000000 08:03 1844544                    /usr/lib64/python3.6/lib-dynload/_opcode.cpython-36m-x86_64-linux-gnu.so
+2b12a320e000-2b12a340d000 ---p 00001000 08:03 1844544                    /usr/lib64/python3.6/lib-dynload/_opcode.cpython-36m-x86_64-linux-gnu.so
+2b12a340d000-2b12a340e000 r--p 00000000 08:03 1844544                    /usr/lib64/python3.6/lib-dynload/_opcode.cpython-36m-x86_64-linux-gnu.so
+2b12a340e000-2b12a340f000 rw-p 00001000 08:03 1844544                    /usr/lib64/python3.6/lib-dynload/_opcode.cpython-36m-x86_64-linux-gnu.so
+2b12a340f000-2b12a344f000 rw-p 00000000 00:00 0 
+2b12a344f000-2b12a3477000 r-xp 00000000 00:30 9258328045532935669        /u/home/a/amandawe/.local/lib/python3.6/site-packages/pandas/_libs/hashing.cpython-36m-x86_64-linux-gnu.so
+2b12a3477000-2b12a3676000 ---p 00028000 00:30 9258328045532935669        /u/home/a/amandawe/.local/lib/python3.6/site-packages/pandas/_libs/hashing.cpython-36m-x86_64-linux-gnu.so
+2b12a3676000-2b12a3679000 rw-p 00027000 00:30 9258328045532935669        /u/home/a/amandawe/.local/lib/python3.6/site-packages/pandas/_libs/hashing.cpython-36m-x86_64-linux-gnu.so
+2b12a3679000-2b12a36ba000 rw-p 00000000 00:00 0 
+2b12a36ba000-2b12a36eb000 r-xp 00000000 00:30 9258328045553876820        /u/home/a/amandawe/.local/lib/python3.6/site-packages/pandas/_libs/ops.cpython-36m-x86_64-linux-gnu.so
+2b12a36eb000-2b12a38eb000 ---p 00031000 00:30 9258328045553876820        /u/home/a/amandawe/.local/lib/python3.6/site-packages/pandas/_libs/ops.cpython-36m-x86_64-linux-gnu.so
+2b12a38eb000-2b12a38ef000 rw-p 00031000 00:30 9258328045553876820        /u/home/a/amandawe/.local/lib/python3.6/site-packages/pandas/_libs/ops.cpython-36m-x86_64-linux-gnu.so
+2b12a38ef000-2b12a3a30000 rw-p 00000000 00:00 0 
+2b12a3a30000-2b12a3ab2000 r-xp 00000000 00:30 9258328045532935668        /u/home/a/amandawe/.local/lib/python3.6/site-packages/pandas/_libs/index.cpython-36m-x86_64-linux-gnu.so
+2b12a3ab2000-2b12a3cb2000 ---p 00082000 00:30 9258328045532935668        /u/home/a/amandawe/.local/lib/python3.6/site-packages/pandas/_libs/index.cpython-36m-x86_64-linux-gnu.so
+2b12a3cb2000-2b12a3cba000 rw-p 00082000 00:30 9258328045532935668        /u/home/a/amandawe/.local/lib/python3.6/site-packages/pandas/_libs/index.cpython-36m-x86_64-linux-gnu.so
+2b12a3cba000-2b12a3cbd000 rw-p 00000000 00:00 0 
+2b12a3cbd000-2b12a3eff000 r-xp 00000000 00:30 9258328045532935670        /u/home/a/amandawe/.local/lib/python3.6/site-packages/pandas/_libs/join.cpython-36m-x86_64-linux-gnu.so
+2b12a3eff000-2b12a40fe000 ---p 00242000 00:30 9258328045532935670        /u/home/a/amandawe/.local/lib/python3.6/site-packages/pandas/_libs/join.cpython-36m-x86_64-linux-gnu.so
+2b12a40fe000-2b12a4107000 rw-p 00241000 00:30 9258328045532935670        /u/home/a/amandawe/.local/lib/python3.6/site-packages/pandas/_libs/join.cpython-36m-x86_64-linux-gnu.so
+2b12a4107000-2b12a414d000 rw-p 00000000 00:00 0 
+2b12a414d000-2b12a4214000 r-xp 00000000 00:30 9258328045553876819        /u/home/a/amandawe/.local/lib/python3.6/site-packages/pandas/_libs/sparse.cpython-36m-x86_64-linux-gnu.so
+2b12a4214000-2b12a4414000 ---p 000c7000 00:30 9258328045553876819        /u/home/a/amandawe/.local/lib/python3.6/site-packages/pandas/_libs/sparse.cpython-36m-x86_64-linux-gnu.so
+2b12a4414000-2b12a441b000 rw-p 000c7000 00:30 9258328045553876819        /u/home/a/amandawe/.local/lib/python3.6/site-packages/pandas/_libs/sparse.cpython-36m-x86_64-linux-gnu.so
+2b12a441b000-2b12a459d000 rw-p 00000000 00:00 0 
+2b12a459d000-2b12a45d4000 r-xp 00000000 00:30 9258328045553876809        /u/home/a/amandawe/.local/lib/python3.6/site-packages/pandas/_libs/reshape.cpython-36m-x86_64-linux-gnu.so
+2b12a45d4000-2b12a47d3000 ---p 00037000 00:30 9258328045553876809        /u/home/a/amandawe/.local/lib/python3.6/site-packages/pandas/_libs/reshape.cpython-36m-x86_64-linux-gnu.so
+2b12a47d3000-2b12a47d8000 rw-p 00036000 00:30 9258328045553876809        /u/home/a/amandawe/.local/lib/python3.6/site-packages/pandas/_libs/reshape.cpython-36m-x86_64-linux-gnu.so
+2b12a47d8000-2b12a4859000 rw-p 00000000 00:00 0 
+2b12a487d000-2b12a48bd000 rw-p 00000000 00:00 0 
+2b12a48bd000-2b12a48c8000 r-xp 00000000 08:03 1844530                    /usr/lib64/python3.6/lib-dynload/_json.cpython-36m-x86_64-linux-gnu.so
+2b12a48c8000-2b12a4ac7000 ---p 0000b000 08:03 1844530                    /usr/lib64/python3.6/lib-dynload/_json.cpython-36m-x86_64-linux-gnu.so
+2b12a4ac7000-2b12a4ac8000 r--p 0000a000 08:03 1844530                    /usr/lib64/python3.6/lib-dynload/_json.cpython-36m-x86_64-linux-gnu.so
+2b12a4ac8000-2b12a4ac9000 rw-p 0000b000 08:03 1844530                    /usr/lib64/python3.6/lib-dynload/_json.cpython-36m-x86_64-linux-gnu.so
+2b12a4ac9000-2b12a4ad2000 r-xp 00000000 00:30 9258328045553876810        /u/home/a/amandawe/.local/lib/python3.6/site-packages/pandas/_libs/indexing.cpython-36m-x86_64-linux-gnu.so
+2b12a4ad2000-2b12a4cd1000 ---p 00009000 00:30 9258328045553876810        /u/home/a/amandawe/.local/lib/python3.6/site-packages/pandas/_libs/indexing.cpython-36m-x86_64-linux-gnu.so
+2b12a4cd1000-2b12a4cd3000 rw-p 00008000 00:30 9258328045553876810        /u/home/a/amandawe/.local/lib/python3.6/site-packages/pandas/_libs/indexing.cpython-36m-x86_64-linux-gnu.so
+2b12a4cd3000-2b12a4d02000 r-xp 00000000 00:30 9258328045553876808        /u/home/a/amandawe/.local/lib/python3.6/site-packages/pandas/_libs/writers.cpython-36m-x86_64-linux-gnu.so
+2b12a4d02000-2b12a4f02000 ---p 0002f000 00:30 9258328045553876808        /u/home/a/amandawe/.local/lib/python3.6/site-packages/pandas/_libs/writers.cpython-36m-x86_64-linux-gnu.so
+2b12a4f02000-2b12a4f06000 rw-p 0002f000 00:30 9258328045553876808        /u/home/a/amandawe/.local/lib/python3.6/site-packages/pandas/_libs/writers.cpython-36m-x86_64-linux-gnu.so
+2b12a4f06000-2b12a4f07000 rw-p 00000000 00:00 0 
+2b12a4f07000-2b12a4f40000 r-xp 00000000 00:30 9258328045553876821        /u/home/a/amandawe/.local/lib/python3.6/site-packages/pandas/_libs/internals.cpython-36m-x86_64-linux-gnu.so
+2b12a4f40000-2b12a513f000 ---p 00039000 00:30 9258328045553876821        /u/home/a/amandawe/.local/lib/python3.6/site-packages/pandas/_libs/internals.cpython-36m-x86_64-linux-gnu.so
+2b12a513f000-2b12a5144000 rw-p 00038000 00:30 9258328045553876821        /u/home/a/amandawe/.local/lib/python3.6/site-packages/pandas/_libs/internals.cpython-36m-x86_64-linux-gnu.so
+2b12a5144000-2b12a5185000 rw-p 00000000 00:00 0 
+2b12a5185000-2b12a5244000 r-xp 00000000 08:03 1844573                    /usr/lib64/python3.6/lib-dynload/unicodedata.cpython-36m-x86_64-linux-gnu.so
+2b12a5244000-2b12a5444000 ---p 000bf000 08:03 1844573                    /usr/lib64/python3.6/lib-dynload/unicodedata.cpython-36m-x86_64-linux-gnu.so
+2b12a5444000-2b12a5445000 r--p 000bf000 08:03 1844573                    /usr/lib64/python3.6/lib-dynload/unicodedata.cpython-36m-x86_64-linux-gnu.so
+2b12a5445000-2b12a5460000 rw-p 000c0000 08:03 1844573                    /usr/lib64/python3.6/lib-dynload/unicodedata.cpython-36m-x86_64-linux-gnu.so
+2b12a5460000-2b12a5465000 r-xp 00000000 08:03 1844548                    /usr/lib64/python3.6/lib-dynload/mmap.cpython-36m-x86_64-linux-gnu.so
+2b12a5465000-2b12a5664000 ---p 00005000 08:03 1844548                    /usr/lib64/python3.6/lib-dynload/mmap.cpython-36m-x86_64-linux-gnu.so
+2b12a5664000-2b12a5665000 r--p 00004000 08:03 1844548                    /usr/lib64/python3.6/lib-dynload/mmap.cpython-36m-x86_64-linux-gnu.so
+2b12a5665000-2b12a5666000 rw-p 00005000 08:03 1844548                    /usr/lib64/python3.6/lib-dynload/mmap.cpython-36m-x86_64-linux-gnu.so
+2b12a5666000-2b12a56e6000 rw-p 00000000 00:00 0 
+2b12a56e6000-2b12a5744000 r-xp 00000000 00:30 9258328045532935677        /u/home/a/amandawe/.local/lib/python3.6/site-packages/pandas/_libs/window/aggregations.cpython-36m-x86_64-linux-gnu.so
+2b12a5744000-2b12a5943000 ---p 0005e000 00:30 9258328045532935677        /u/home/a/amandawe/.local/lib/python3.6/site-packages/pandas/_libs/window/aggregations.cpython-36m-x86_64-linux-gnu.so
+2b12a5943000-2b12a5949000 rw-p 0005d000 00:30 9258328045532935677        /u/home/a/amandawe/.local/lib/python3.6/site-packages/pandas/_libs/window/aggregations.cpython-36m-x86_64-linux-gnu.so
+2b12a5949000-2b12a594b000 rw-p 00000000 00:00 0 
+2b12a594b000-2b12a5a34000 r-xp 00000000 08:03 934617                     /usr/lib64/libstdc++.so.6.0.19
+2b12a5a34000-2b12a5c34000 ---p 000e9000 08:03 934617                     /usr/lib64/libstdc++.so.6.0.19
+2b12a5c34000-2b12a5c3c000 r--p 000e9000 08:03 934617                     /usr/lib64/libstdc++.so.6.0.19
+2b12a5c3c000-2b12a5c3e000 rw-p 000f1000 08:03 934617                     /usr/lib64/libstdc++.so.6.0.19
+2b12a5c3e000-2b12a5c53000 rw-p 00000000 00:00 0 
+2b12a5c53000-2b12a5c68000 r-xp 00000000 08:03 936057                     /usr/lib64/libgcc_s-4.8.5-20150702.so.1
+2b12a5c68000-2b12a5e67000 ---p 00015000 08:03 936057                     /usr/lib64/libgcc_s-4.8.5-20150702.so.1
+2b12a5e67000-2b12a5e68000 r--p 00014000 08:03 936057                     /usr/lib64/libgcc_s-4.8.5-20150702.so.1
+2b12a5e68000-2b12a5e69000 rw-p 00015000 08:03 936057                     /usr/lib64/libgcc_s-4.8.5-20150702.so.1
+2b12a5e69000-2b12a5ea9000 rw-p 00000000 00:00 0 
+2b12a5ea9000-2b12a5ecf000 r-xp 00000000 00:30 9258328045545415857        /u/home/a/amandawe/.local/lib/python3.6/site-packages/pandas/_libs/window/indexers.cpython-36m-x86_64-linux-gnu.so
+2b12a5ecf000-2b12a60cf000 ---p 00026000 00:30 9258328045545415857        /u/home/a/amandawe/.local/lib/python3.6/site-packages/pandas/_libs/window/indexers.cpython-36m-x86_64-linux-gnu.so
+2b12a60cf000-2b12a60d2000 rw-p 00026000 00:30 9258328045545415857        /u/home/a/amandawe/.local/lib/python3.6/site-packages/pandas/_libs/window/indexers.cpython-36m-x86_64-linux-gnu.so
+2b12a60d2000-2b12a6193000 rw-p 00000000 00:00 0 
+2b12a6193000-2b12a628a000 r-xp 00000000 00:30 9258328045553876818        /u/home/a/amandawe/.local/lib/python3.6/site-packages/pandas/_libs/groupby.cpython-36m-x86_64-linux-gnu.so
+2b12a628a000-2b12a6489000 ---p 000f7000 00:30 9258328045553876818        /u/home/a/amandawe/.local/lib/python3.6/site-packages/pandas/_libs/groupby.cpython-36m-x86_64-linux-gnu.so
+2b12a6489000-2b12a6492000 rw-p 000f6000 00:30 9258328045553876818        /u/home/a/amandawe/.local/lib/python3.6/site-packages/pandas/_libs/groupby.cpython-36m-x86_64-linux-gnu.so
+2b12a6492000-2b12a65d7000 rw-p 00000000 00:00 0 
+2b12a65d7000-2b12a661c000 r-xp 00000000 00:30 9258328045553876815        /u/home/a/amandawe/.local/lib/python3.6/site-packages/pandas/_libs/reduction.cpython-36m-x86_64-linux-gnu.so
+2b12a661c000-2b12a681c000 ---p 00045000 00:30 9258328045553876815        /u/home/a/amandawe/.local/lib/python3.6/site-packages/pandas/_libs/reduction.cpython-36m-x86_64-linux-gnu.so
+2b12a681c000-2b12a6821000 rw-p 00045000 00:30 9258328045553876815        /u/home/a/amandawe/.local/lib/python3.6/site-packages/pandas/_libs/reduction.cpython-36m-x86_64-linux-gnu.so
+2b12a6821000-2b12a6862000 rw-p 00000000 00:00 0 
+2b12a6862000-2b12a68dd000 r-xp 00000000 00:30 9258328045553876812        /u/home/a/amandawe/.local/lib/python3.6/site-packages/pandas/_libs/parsers.cpython-36m-x86_64-linux-gnu.so
+2b12a68dd000-2b12a6adc000 ---p 0007b000 00:30 9258328045553876812        /u/home/a/amandawe/.local/lib/python3.6/site-packages/pandas/_libs/parsers.cpython-36m-x86_64-linux-gnu.so
+2b12a6adc000-2b12a6ae3000 rw-p 0007a000 00:30 9258328045553876812        /u/home/a/amandawe/.local/lib/python3.6/site-packages/pandas/_libs/parsers.cpython-36m-x86_64-linux-gnu.so
+2b12a6ae3000-2b12a6b26000 rw-p 00000000 00:00 0 
+2b12a6b26000-2b12a6b3a000 r-xp 00000000 00:30 9258328045553876814        /u/home/a/amandawe/.local/lib/python3.6/site-packages/pandas/_libs/json.cpython-36m-x86_64-linux-gnu.so
+2b12a6b3a000-2b12a6d3a000 ---p 00014000 00:30 9258328045553876814        /u/home/a/amandawe/.local/lib/python3.6/site-packages/pandas/_libs/json.cpython-36m-x86_64-linux-gnu.so
+2b12a6d3a000-2b12a6d3b000 rw-p 00014000 00:30 9258328045553876814        /u/home/a/amandawe/.local/lib/python3.6/site-packages/pandas/_libs/json.cpython-36m-x86_64-linux-gnu.so
+2b12a6d3b000-2b12a6e7b000 rw-p 00000000 00:00 0 
+2b12a6e7b000-2b12a6e8e000 r-xp 00000000 00:30 9258328045532935667        /u/home/a/amandawe/.local/lib/python3.6/site-packages/pandas/_libs/testing.cpython-36m-x86_64-linux-gnu.so
+2b12a6e8e000-2b12a708e000 ---p 00013000 00:30 9258328045532935667        /u/home/a/amandawe/.local/lib/python3.6/site-packages/pandas/_libs/testing.cpython-36m-x86_64-linux-gnu.so
+2b12a708e000-2b12a7090000 rw-p 00013000 00:30 9258328045532935667        /u/home/a/amandawe/.local/lib/python3.6/site-packages/pandas/_libs/testing.cpython-36m-x86_64-linux-gnu.so
+2b12a7090000-2b12a70d1000 rw-p 00000000 00:00 0 
+2b12a70d1000-2b12a70e5000 r-xp 00000000 08:03 1844519                    /usr/lib64/python3.6/lib-dynload/_socket.cpython-36m-x86_64-linux-gnu.so
+2b12a70e5000-2b12a72e4000 ---p 00014000 08:03 1844519                    /usr/lib64/python3.6/lib-dynload/_socket.cpython-36m-x86_64-linux-gnu.so
+2b12a72e4000-2b12a72e5000 r--p 00013000 08:03 1844519                    /usr/lib64/python3.6/lib-dynload/_socket.cpython-36m-x86_64-linux-gnu.so
+2b12a72e5000-2b12a72ea000 rw-p 00014000 08:03 1844519                    /usr/lib64/python3.6/lib-dynload/_socket.cpython-36m-x86_64-linux-gnu.so
+2b12a72ea000-2b12a72f5000 r-xp 00000000 08:03 1844525                    /usr/lib64/python3.6/lib-dynload/array.cpython-36m-x86_64-linux-gnu.so
+2b12a72f5000-2b12a74f4000 ---p 0000b000 08:03 1844525                    /usr/lib64/python3.6/lib-dynload/array.cpython-36m-x86_64-linux-gnu.so
+2b12a74f4000-2b12a74f5000 r--p 0000a000 08:03 1844525                    /usr/lib64/python3.6/lib-dynload/array.cpython-36m-x86_64-linux-gnu.so
+2b12a74f5000-2b12a74f8000 rw-p 0000b000 08:03 1844525                    /usr/lib64/python3.6/lib-dynload/array.cpython-36m-x86_64-linux-gnu.so
+2b12a74f8000-2b12a7578000 rw-p 00000000 00:00 0 
+2b12a7578000-2b12a7586000 r-xp 00000000 00:30 9258328062726419789        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/_lib/_ccallback_c.cpython-36m-x86_64-linux-gnu.so
+2b12a7586000-2b12a7786000 ---p 0000e000 00:30 9258328062726419789        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/_lib/_ccallback_c.cpython-36m-x86_64-linux-gnu.so
+2b12a7786000-2b12a7788000 rw-p 0000e000 00:30 9258328062726419789        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/_lib/_ccallback_c.cpython-36m-x86_64-linux-gnu.so
+2b12a7788000-2b12a7792000 r-xp 00000000 00:30 9258328054140956527        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/_lib/_uarray/_uarray.cpython-36m-x86_64-linux-gnu.so
+2b12a7792000-2b12a7992000 ---p 0000a000 00:30 9258328054140956527        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/_lib/_uarray/_uarray.cpython-36m-x86_64-linux-gnu.so
+2b12a7992000-2b12a7993000 rw-p 0000a000 00:30 9258328054140956527        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/_lib/_uarray/_uarray.cpython-36m-x86_64-linux-gnu.so
+2b12a7993000-2b12a79d3000 rw-p 00000000 00:00 0 
+2b12a79d3000-2b12a7a84000 r-xp 00000000 00:30 9258328062714723000        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/fft/_pocketfft/pypocketfft.cpython-36m-x86_64-linux-gnu.so
+2b12a7a84000-2b12a7c84000 ---p 000b1000 00:30 9258328062714723000        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/fft/_pocketfft/pypocketfft.cpython-36m-x86_64-linux-gnu.so
+2b12a7c84000-2b12a7c86000 rw-p 000b1000 00:30 9258328062714723000        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/fft/_pocketfft/pypocketfft.cpython-36m-x86_64-linux-gnu.so
+2b12a7c86000-2b12a7c8a000 rw-p 00000000 00:00 0 
+2b12a7c8a000-2b12a7e2f000 r-xp 00000000 00:30 9258328062728574519        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/special/_ufuncs.cpython-36m-x86_64-linux-gnu.so
+2b12a7e2f000-2b12a802e000 ---p 001a5000 00:30 9258328062728574519        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/special/_ufuncs.cpython-36m-x86_64-linux-gnu.so
+2b12a802e000-2b12a8039000 rw-p 001a4000 00:30 9258328062728574519        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/special/_ufuncs.cpython-36m-x86_64-linux-gnu.so
+2b12a8039000-2b12a8042000 rw-p 00000000 00:00 0 
+2b12a8042000-2b12a8047000 rw-p 001af000 00:30 9258328062728574519        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/special/_ufuncs.cpython-36m-x86_64-linux-gnu.so
+2b12a8047000-2b12a9af5000 r-xp 00000000 00:30 9258328062722023580        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy.libs/libopenblasp-r0-085ca80a.3.9.so
+2b12a9af5000-2b12a9cf5000 ---p 01aae000 00:30 9258328062722023580        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy.libs/libopenblasp-r0-085ca80a.3.9.so
+2b12a9cf5000-2b12a9d0f000 rw-p 01aae000 00:30 9258328062722023580        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy.libs/libopenblasp-r0-085ca80a.3.9.so
+2b12a9d0f000-2b12a9d1a000 rw-p 00000000 00:00 0 
+2b12a9d1a000-2b12a9d94000 rw-p 01b9d000 00:30 9258328062722023580        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy.libs/libopenblasp-r0-085ca80a.3.9.so
+2b12aa397000-2b12ae397000 rw-p 00000000 00:00 0 
+2b12ae799000-2b12b2799000 rw-p 00000000 00:00 0 
+2b12b2d9c000-2b12b6d9c000 rw-p 00000000 00:00 0 
+2b12b6f9d000-2b12baf9d000 rw-p 00000000 00:00 0 
+2b12bb19e000-2b12bd19e000 rw-p 00000000 00:00 0 
+2b12bd5a0000-2b12c15a0000 rw-p 00000000 00:00 0 
+2b12c17a1000-2b12c37a1000 rw-p 00000000 00:00 0 
+2b12c39a2000-2b12c59a2000 rw-p 00000000 00:00 0 
+2b12c5da4000-2b12c9da4000 rw-p 00000000 00:00 0 
+2b12ca3a7000-2b12d03a7000 rw-p 00000000 00:00 0 
+2b12d07a9000-2b12d27a9000 rw-p 00000000 00:00 0 
+2b12d29aa000-2b12d69aa000 rw-p 00000000 00:00 0 
+2b12d6dac000-2b12dadac000 rw-p 00000000 00:00 0 
+2b12db1ae000-2b12df1ae000 rw-p 00000000 00:00 0 
+2b12df5b0000-2b12e15b0000 rw-p 00000000 00:00 0 
+2b12e17b1000-2b12e37b1000 rw-p 00000000 00:00 0 
+2b12e39b2000-2b12e59b2000 rw-p 00000000 00:00 0 
+2b12e5bb3000-2b12e7bb3000 rw-p 00000000 00:00 0 
+2b12e7db4000-2b12ebdb4000 rw-p 00000000 00:00 0 
+2b12ec1b6000-2b12f01b6000 rw-p 00000000 00:00 0 
+2b12f03b7000-2b12f43b7000 rw-p 00000000 00:00 0 
+2b12f43b7000-2b12f43d4000 r-xp 00000000 00:30 9258328062728574527        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/special/_ufuncs_cxx.cpython-36m-x86_64-linux-gnu.so
+2b12f43d4000-2b12f45d3000 ---p 0001d000 00:30 9258328062728574527        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/special/_ufuncs_cxx.cpython-36m-x86_64-linux-gnu.so
+2b12f45d3000-2b12f45d5000 rw-p 0001c000 00:30 9258328062728574527        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/special/_ufuncs_cxx.cpython-36m-x86_64-linux-gnu.so
+2b12f45d5000-2b12f4615000 rw-p 00000000 00:00 0 
+2b12f4615000-2b12f46c5000 r-xp 00000000 00:30 9258328062728574518        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/special/specfun.cpython-36m-x86_64-linux-gnu.so
+2b12f46c5000-2b12f48c4000 ---p 000b0000 00:30 9258328062728574518        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/special/specfun.cpython-36m-x86_64-linux-gnu.so
+2b12f48c4000-2b12f48c9000 rw-p 000af000 00:30 9258328062728574518        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/special/specfun.cpython-36m-x86_64-linux-gnu.so
+2b12f48c9000-2b12f48cb000 rw-p 000b5000 00:30 9258328062728574518        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/special/specfun.cpython-36m-x86_64-linux-gnu.so
+2b12f48cb000-2b12f4937000 r-xp 00000000 00:30 9258328062713983769        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/linalg/_fblas.cpython-36m-x86_64-linux-gnu.so
+2b12f4937000-2b12f4b37000 ---p 0006c000 00:30 9258328062713983769        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/linalg/_fblas.cpython-36m-x86_64-linux-gnu.so
+2b12f4b37000-2b12f4b5d000 rw-p 0006c000 00:30 9258328062713983769        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/linalg/_fblas.cpython-36m-x86_64-linux-gnu.so
+2b12f4b5d000-2b12f4b61000 rw-p 00093000 00:30 9258328062713983769        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/linalg/_fblas.cpython-36m-x86_64-linux-gnu.so
+2b12f4b61000-2b12f4cbc000 r-xp 00000000 00:30 9258328062719459537        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/linalg/_flapack.cpython-36m-x86_64-linux-gnu.so
+2b12f4cbc000-2b12f4ebb000 ---p 0015b000 00:30 9258328062719459537        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/linalg/_flapack.cpython-36m-x86_64-linux-gnu.so
+2b12f4ebb000-2b12f4f3b000 rw-p 0015a000 00:30 9258328062719459537        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/linalg/_flapack.cpython-36m-x86_64-linux-gnu.so
+2b12f4f3b000-2b12f4f3c000 rw-p 00000000 00:00 0 
+2b12f4f3c000-2b12f4f45000 rw-p 001db000 00:30 9258328062719459537        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/linalg/_flapack.cpython-36m-x86_64-linux-gnu.so
+2b12f4f45000-2b12f4fc5000 rw-p 00000000 00:00 0 
+2b12f4fc5000-2b12f4fd2000 r-xp 00000000 00:30 9258328062717563137        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/linalg/_flinalg.cpython-36m-x86_64-linux-gnu.so
+2b12f4fd2000-2b12f51d2000 ---p 0000d000 00:30 9258328062717563137        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/linalg/_flinalg.cpython-36m-x86_64-linux-gnu.so
+2b12f51d2000-2b12f51d5000 rw-p 0000d000 00:30 9258328062717563137        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/linalg/_flinalg.cpython-36m-x86_64-linux-gnu.so
+2b12f51d5000-2b12f51d8000 rw-p 00011000 00:30 9258328062717563137        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/linalg/_flinalg.cpython-36m-x86_64-linux-gnu.so
+2b12f51d8000-2b12f5209000 r-xp 00000000 00:30 9258328062729286516        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/linalg/_solve_toeplitz.cpython-36m-x86_64-linux-gnu.so
+2b12f5209000-2b12f5409000 ---p 00031000 00:30 9258328062729286516        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/linalg/_solve_toeplitz.cpython-36m-x86_64-linux-gnu.so
+2b12f5409000-2b12f540d000 rw-p 00031000 00:30 9258328062729286516        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/linalg/_solve_toeplitz.cpython-36m-x86_64-linux-gnu.so
+2b12f540d000-2b12f540e000 rw-p 00000000 00:00 0 
+2b12f540e000-2b12f5454000 r-xp 00000000 00:30 9258328062713983761        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/linalg/_decomp_update.cpython-36m-x86_64-linux-gnu.so
+2b12f5454000-2b12f5654000 ---p 00046000 00:30 9258328062713983761        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/linalg/_decomp_update.cpython-36m-x86_64-linux-gnu.so
+2b12f5654000-2b12f565a000 rw-p 00046000 00:30 9258328062713983761        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/linalg/_decomp_update.cpython-36m-x86_64-linux-gnu.so
+2b12f565a000-2b12f565b000 rw-p 00000000 00:00 0 
+2b12f565b000-2b12f5690000 r-xp 00000000 00:30 9258328062719459526        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/linalg/cython_blas.cpython-36m-x86_64-linux-gnu.so
+2b12f5690000-2b12f5890000 ---p 00035000 00:30 9258328062719459526        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/linalg/cython_blas.cpython-36m-x86_64-linux-gnu.so
+2b12f5890000-2b12f589a000 rw-p 00035000 00:30 9258328062719459526        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/linalg/cython_blas.cpython-36m-x86_64-linux-gnu.so
+2b12f589a000-2b12f5927000 r-xp 00000000 00:30 9258328062713983760        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/linalg/cython_lapack.cpython-36m-x86_64-linux-gnu.so
+2b12f5927000-2b12f5b26000 ---p 0008d000 00:30 9258328062713983760        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/linalg/cython_lapack.cpython-36m-x86_64-linux-gnu.so
+2b12f5b26000-2b12f5b2a000 rw-p 0008c000 00:30 9258328062713983760        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/linalg/cython_lapack.cpython-36m-x86_64-linux-gnu.so
+2b12f5b2a000-2b12f5b3f000 rw-p 00091000 00:30 9258328062713983760        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/linalg/cython_lapack.cpython-36m-x86_64-linux-gnu.so
+2b12f5b3f000-2b12f5b7f000 rw-p 00000000 00:00 0 
+2b12f5b7f000-2b12f5ec8000 r-xp 00000000 00:30 9258328062719406217        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/sparse/_sparsetools.cpython-36m-x86_64-linux-gnu.so
+2b12f5ec8000-2b12f60c8000 ---p 00349000 00:30 9258328062719406217        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/sparse/_sparsetools.cpython-36m-x86_64-linux-gnu.so
+2b12f60c8000-2b12f60c9000 rw-p 00349000 00:30 9258328062719406217        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/sparse/_sparsetools.cpython-36m-x86_64-linux-gnu.so
+2b12f60c9000-2b12f6109000 rw-p 00000000 00:00 0 
+2b12f6109000-2b12f6178000 r-xp 00000000 00:30 9258328062723986825        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/sparse/_csparsetools.cpython-36m-x86_64-linux-gnu.so
+2b12f6178000-2b12f6378000 ---p 0006f000 00:30 9258328062723986825        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/sparse/_csparsetools.cpython-36m-x86_64-linux-gnu.so
+2b12f6378000-2b12f637e000 rw-p 0006f000 00:30 9258328062723986825        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/sparse/_csparsetools.cpython-36m-x86_64-linux-gnu.so
+2b12f637e000-2b12f63c1000 rw-p 00000000 00:00 0 
+2b12f63c1000-2b12f6417000 r-xp 00000000 00:30 9258328062726484621        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/sparse/csgraph/_shortest_path.cpython-36m-x86_64-linux-gnu.so
+2b12f6417000-2b12f6616000 ---p 00056000 00:30 9258328062726484621        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/sparse/csgraph/_shortest_path.cpython-36m-x86_64-linux-gnu.so
+2b12f6616000-2b12f661f000 rw-p 00055000 00:30 9258328062726484621        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/sparse/csgraph/_shortest_path.cpython-36m-x86_64-linux-gnu.so
+2b12f661f000-2b12f6621000 rw-p 00000000 00:00 0 
+2b12f6621000-2b12f6641000 r-xp 00000000 00:30 9258328062726484620        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/sparse/csgraph/_tools.cpython-36m-x86_64-linux-gnu.so
+2b12f6641000-2b12f6840000 ---p 00020000 00:30 9258328062726484620        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/sparse/csgraph/_tools.cpython-36m-x86_64-linux-gnu.so
+2b12f6840000-2b12f6845000 rw-p 0001f000 00:30 9258328062726484620        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/sparse/csgraph/_tools.cpython-36m-x86_64-linux-gnu.so
+2b12f6845000-2b12f6846000 rw-p 00000000 00:00 0 
+2b12f6846000-2b12f6863000 r-xp 00000000 00:30 9258328062726484623        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/sparse/csgraph/_traversal.cpython-36m-x86_64-linux-gnu.so
+2b12f6863000-2b12f6a62000 ---p 0001d000 00:30 9258328062726484623        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/sparse/csgraph/_traversal.cpython-36m-x86_64-linux-gnu.so
+2b12f6a62000-2b12f6a67000 rw-p 0001c000 00:30 9258328062726484623        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/sparse/csgraph/_traversal.cpython-36m-x86_64-linux-gnu.so
+2b12f6a67000-2b12f6a90000 r-xp 00000000 00:30 9258328062713151698        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/sparse/csgraph/_min_spanning_tree.cpython-36m-x86_64-linux-gnu.so
+2b12f6a90000-2b12f6c8f000 ---p 00029000 00:30 9258328062713151698        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/sparse/csgraph/_min_spanning_tree.cpython-36m-x86_64-linux-gnu.so
+2b12f6c8f000-2b12f6c93000 rw-p 00028000 00:30 9258328062713151698        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/sparse/csgraph/_min_spanning_tree.cpython-36m-x86_64-linux-gnu.so
+2b12f6c93000-2b12f6c94000 rw-p 00000000 00:00 0 
+2b12f6c94000-2b12f6cc9000 r-xp 00000000 00:30 9258328062719406224        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/sparse/csgraph/_flow.cpython-36m-x86_64-linux-gnu.so
+2b12f6cc9000-2b12f6ec8000 ---p 00035000 00:30 9258328062719406224        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/sparse/csgraph/_flow.cpython-36m-x86_64-linux-gnu.so
+2b12f6ec8000-2b12f6ece000 rw-p 00034000 00:30 9258328062719406224        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/sparse/csgraph/_flow.cpython-36m-x86_64-linux-gnu.so
+2b12f6ece000-2b12f6ecf000 rw-p 00000000 00:00 0 
+2b12f6ecf000-2b12f6efa000 r-xp 00000000 00:30 9258328062719406225        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/sparse/csgraph/_matching.cpython-36m-x86_64-linux-gnu.so
+2b12f6efa000-2b12f70f9000 ---p 0002b000 00:30 9258328062719406225        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/sparse/csgraph/_matching.cpython-36m-x86_64-linux-gnu.so
+2b12f70f9000-2b12f70fd000 rw-p 0002a000 00:30 9258328062719406225        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/sparse/csgraph/_matching.cpython-36m-x86_64-linux-gnu.so
+2b12f70fd000-2b12f70fe000 rw-p 00000000 00:00 0 
+2b12f70fe000-2b12f7136000 r-xp 00000000 00:30 9258328062726484625        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/sparse/csgraph/_reordering.cpython-36m-x86_64-linux-gnu.so
+2b12f7136000-2b12f7336000 ---p 00038000 00:30 9258328062726484625        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/sparse/csgraph/_reordering.cpython-36m-x86_64-linux-gnu.so
+2b12f7336000-2b12f733b000 rw-p 00038000 00:30 9258328062726484625        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/sparse/csgraph/_reordering.cpython-36m-x86_64-linux-gnu.so
+2b12f733b000-2b12f733c000 rw-p 00000000 00:00 0 
+2b12f733c000-2b12f7342000 r-xp 00000000 00:30 9258328062730355990        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/special/_comb.cpython-36m-x86_64-linux-gnu.so
+2b12f7342000-2b12f7542000 ---p 00006000 00:30 9258328062730355990        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/special/_comb.cpython-36m-x86_64-linux-gnu.so
+2b12f7542000-2b12f7543000 rw-p 00006000 00:30 9258328062730355990        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/special/_comb.cpython-36m-x86_64-linux-gnu.so
+2b12f7543000-2b12f7554000 r-xp 00000000 00:30 9258328062728574520        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/special/_ellip_harm_2.cpython-36m-x86_64-linux-gnu.so
+2b12f7554000-2b12f7753000 ---p 00011000 00:30 9258328062728574520        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/special/_ellip_harm_2.cpython-36m-x86_64-linux-gnu.so
+2b12f7753000-2b12f7758000 rw-p 00010000 00:30 9258328062728574520        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/special/_ellip_harm_2.cpython-36m-x86_64-linux-gnu.so
+2b12f7758000-2b12f7798000 rw-p 00000000 00:00 0 
+2b12f7798000-2b12f77cc000 r-xp 00000000 00:30 9258328062723973944        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/interpolate/_fitpack.cpython-36m-x86_64-linux-gnu.so
+2b12f77cc000-2b12f79cc000 ---p 00034000 00:30 9258328062723973944        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/interpolate/_fitpack.cpython-36m-x86_64-linux-gnu.so
+2b12f79cc000-2b12f79cd000 rw-p 00034000 00:30 9258328062723973944        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/interpolate/_fitpack.cpython-36m-x86_64-linux-gnu.so
+2b12f79cd000-2b12f79cf000 rw-p 00036000 00:30 9258328062723973944        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/interpolate/_fitpack.cpython-36m-x86_64-linux-gnu.so
+2b12f79cf000-2b12f7a2d000 r-xp 00000000 00:30 9258328062720972846        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/interpolate/dfitpack.cpython-36m-x86_64-linux-gnu.so
+2b12f7a2d000-2b12f7c2d000 ---p 0005e000 00:30 9258328062720972846        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/interpolate/dfitpack.cpython-36m-x86_64-linux-gnu.so
+2b12f7c2d000-2b12f7c34000 rw-p 0005e000 00:30 9258328062720972846        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/interpolate/dfitpack.cpython-36m-x86_64-linux-gnu.so
+2b12f7c34000-2b12f7c36000 rw-p 00066000 00:30 9258328062720972846        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/interpolate/dfitpack.cpython-36m-x86_64-linux-gnu.so
+2b12f7c36000-2b12f7c6e000 r-xp 00000000 00:30 9258328062720972841        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/interpolate/_bspl.cpython-36m-x86_64-linux-gnu.so
+2b12f7c6e000-2b12f7e6e000 ---p 00038000 00:30 9258328062720972841        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/interpolate/_bspl.cpython-36m-x86_64-linux-gnu.so
+2b12f7e6e000-2b12f7e74000 rw-p 00038000 00:30 9258328062720972841        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/interpolate/_bspl.cpython-36m-x86_64-linux-gnu.so
+2b12f7e74000-2b12f7e75000 rw-p 00000000 00:00 0 
+2b12f7e75000-2b12f7ebe000 r-xp 00000000 00:30 9258328062720972840        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/interpolate/_ppoly.cpython-36m-x86_64-linux-gnu.so
+2b12f7ebe000-2b12f80be000 ---p 00049000 00:30 9258328062720972840        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/interpolate/_ppoly.cpython-36m-x86_64-linux-gnu.so
+2b12f80be000-2b12f80c4000 rw-p 00049000 00:30 9258328062720972840        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/interpolate/_ppoly.cpython-36m-x86_64-linux-gnu.so
+2b12f80c4000-2b12f80c5000 rw-p 00000000 00:00 0 
+2b12f80c5000-2b12f8113000 r-xp 00000000 00:30 9258328062720972844        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/interpolate/interpnd.cpython-36m-x86_64-linux-gnu.so
+2b12f8113000-2b12f8312000 ---p 0004e000 00:30 9258328062720972844        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/interpolate/interpnd.cpython-36m-x86_64-linux-gnu.so
+2b12f8312000-2b12f8317000 rw-p 0004d000 00:30 9258328062720972844        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/interpolate/interpnd.cpython-36m-x86_64-linux-gnu.so
+2b12f8317000-2b12f8359000 rw-p 00000000 00:00 0 
+2b12f8359000-2b12f8404000 r-xp 00000000 00:30 9258328062722147178        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/spatial/ckdtree.cpython-36m-x86_64-linux-gnu.so
+2b12f8404000-2b12f8603000 ---p 000ab000 00:30 9258328062722147178        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/spatial/ckdtree.cpython-36m-x86_64-linux-gnu.so
+2b12f8603000-2b12f860d000 rw-p 000aa000 00:30 9258328062722147178        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/spatial/ckdtree.cpython-36m-x86_64-linux-gnu.so
+2b12f860d000-2b12f860f000 rw-p 00000000 00:00 0 
+2b12f860f000-2b12f86ef000 r-xp 00000000 00:30 9258328062713291234        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/spatial/qhull.cpython-36m-x86_64-linux-gnu.so
+2b12f86ef000-2b12f88ee000 ---p 000e0000 00:30 9258328062713291234        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/spatial/qhull.cpython-36m-x86_64-linux-gnu.so
+2b12f88ee000-2b12f88f7000 rw-p 000df000 00:30 9258328062713291234        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/spatial/qhull.cpython-36m-x86_64-linux-gnu.so
+2b12f88f7000-2b12f88fa000 rw-p 00000000 00:00 0 
+2b12f88fa000-2b12f88ff000 rw-p 000e9000 00:30 9258328062713291234        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/spatial/qhull.cpython-36m-x86_64-linux-gnu.so
+2b12f88ff000-2b12f8908000 r-xp 00000000 00:30 9258328062726419779        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/_lib/messagestream.cpython-36m-x86_64-linux-gnu.so
+2b12f8908000-2b12f8b07000 ---p 00009000 00:30 9258328062726419779        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/_lib/messagestream.cpython-36m-x86_64-linux-gnu.so
+2b12f8b07000-2b12f8b09000 rw-p 00008000 00:30 9258328062726419779        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/_lib/messagestream.cpython-36m-x86_64-linux-gnu.so
+2b12f8b09000-2b12f8b30000 r-xp 00000000 00:30 9258328062713291232        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/spatial/_voronoi.cpython-36m-x86_64-linux-gnu.so
+2b12f8b30000-2b12f8d2f000 ---p 00027000 00:30 9258328062713291232        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/spatial/_voronoi.cpython-36m-x86_64-linux-gnu.so
+2b12f8d2f000-2b12f8d32000 rw-p 00026000 00:30 9258328062713291232        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/spatial/_voronoi.cpython-36m-x86_64-linux-gnu.so
+2b12f8d32000-2b12f8d73000 rw-p 00000000 00:00 0 
+2b12f8d73000-2b12f8d8a000 r-xp 00000000 00:30 9258328062722147175        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/spatial/_distance_wrap.cpython-36m-x86_64-linux-gnu.so
+2b12f8d8a000-2b12f8f8a000 ---p 00017000 00:30 9258328062722147175        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/spatial/_distance_wrap.cpython-36m-x86_64-linux-gnu.so
+2b12f8f8a000-2b12f8f8b000 rw-p 00017000 00:30 9258328062722147175        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/spatial/_distance_wrap.cpython-36m-x86_64-linux-gnu.so
+2b12f8f8b000-2b12f8fb2000 r-xp 00000000 00:30 9258328062722147177        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/spatial/_hausdorff.cpython-36m-x86_64-linux-gnu.so
+2b12f8fb2000-2b12f91b2000 ---p 00027000 00:30 9258328062722147177        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/spatial/_hausdorff.cpython-36m-x86_64-linux-gnu.so
+2b12f91b2000-2b12f91b5000 rw-p 00027000 00:30 9258328062722147177        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/spatial/_hausdorff.cpython-36m-x86_64-linux-gnu.so
+2b12f91b5000-2b12f9236000 rw-p 00000000 00:00 0 
+2b12f9236000-2b12f924c000 r-xp 00000000 00:30 9258328062719335400        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/integrate/_odepack.cpython-36m-x86_64-linux-gnu.so
+2b12f924c000-2b12f944b000 ---p 00016000 00:30 9258328062719335400        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/integrate/_odepack.cpython-36m-x86_64-linux-gnu.so
+2b12f944b000-2b12f944c000 rw-p 00015000 00:30 9258328062719335400        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/integrate/_odepack.cpython-36m-x86_64-linux-gnu.so
+2b12f944c000-2b12f944d000 rw-p 00000000 00:00 0 
+2b12f944d000-2b12f9450000 rw-p 00017000 00:30 9258328062719335400        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/integrate/_odepack.cpython-36m-x86_64-linux-gnu.so
+2b12f9450000-2b12f946a000 r-xp 00000000 00:30 9258328062729512065        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/integrate/_quadpack.cpython-36m-x86_64-linux-gnu.so
+2b12f946a000-2b12f966a000 ---p 0001a000 00:30 9258328062729512065        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/integrate/_quadpack.cpython-36m-x86_64-linux-gnu.so
+2b12f966a000-2b12f966b000 rw-p 0001a000 00:30 9258328062729512065        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/integrate/_quadpack.cpython-36m-x86_64-linux-gnu.so
+2b12f966b000-2b12f966e000 rw-p 0001c000 00:30 9258328062729512065        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/integrate/_quadpack.cpython-36m-x86_64-linux-gnu.so
+2b12f966e000-2b12f969f000 r-xp 00000000 00:30 9258328062719335401        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/integrate/vode.cpython-36m-x86_64-linux-gnu.so
+2b12f969f000-2b12f989e000 ---p 00031000 00:30 9258328062719335401        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/integrate/vode.cpython-36m-x86_64-linux-gnu.so
+2b12f989e000-2b12f98a5000 rw-p 00030000 00:30 9258328062719335401        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/integrate/vode.cpython-36m-x86_64-linux-gnu.so
+2b12f98a5000-2b12f98c0000 r-xp 00000000 00:30 9258328062729512064        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/integrate/_dop.cpython-36m-x86_64-linux-gnu.so
+2b12f98c0000-2b12f9ac0000 ---p 0001b000 00:30 9258328062729512064        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/integrate/_dop.cpython-36m-x86_64-linux-gnu.so
+2b12f9ac0000-2b12f9ac2000 rw-p 0001b000 00:30 9258328062729512064        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/integrate/_dop.cpython-36m-x86_64-linux-gnu.so
+2b12f9ac2000-2b12f9ac4000 rw-p 0001e000 00:30 9258328062729512064        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/integrate/_dop.cpython-36m-x86_64-linux-gnu.so
+2b12f9ac4000-2b12f9add000 r-xp 00000000 00:30 9258328062718131187        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/integrate/lsoda.cpython-36m-x86_64-linux-gnu.so
+2b12f9add000-2b12f9cdd000 ---p 00019000 00:30 9258328062718131187        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/integrate/lsoda.cpython-36m-x86_64-linux-gnu.so
+2b12f9cdd000-2b12f9ce2000 rw-p 00019000 00:30 9258328062718131187        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/integrate/lsoda.cpython-36m-x86_64-linux-gnu.so
+2b12f9ce2000-2b12f9d22000 rw-p 00000000 00:00 0 
+2b12f9d22000-2b12f9d53000 r-xp 00000000 00:30 9258328062725684743        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/sparse/linalg/isolve/_iterative.cpython-36m-x86_64-linux-gnu.so
+2b12f9d53000-2b12f9f53000 ---p 00031000 00:30 9258328062725684743        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/sparse/linalg/isolve/_iterative.cpython-36m-x86_64-linux-gnu.so
+2b12f9f53000-2b12f9f5a000 rw-p 00031000 00:30 9258328062725684743        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/sparse/linalg/isolve/_iterative.cpython-36m-x86_64-linux-gnu.so
+2b12f9f5a000-2b12f9f5c000 rw-p 00000000 00:00 0 
+2b12f9f5c000-2b12f9f5f000 rw-p 00039000 00:30 9258328062725684743        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/sparse/linalg/isolve/_iterative.cpython-36m-x86_64-linux-gnu.so
+2b12f9f5f000-2b12f9fac000 r-xp 00000000 00:30 9258328054134607682        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/sparse/linalg/dsolve/_superlu.cpython-36m-x86_64-linux-gnu.so
+2b12f9fac000-2b12fa1ab000 ---p 0004d000 00:30 9258328054134607682        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/sparse/linalg/dsolve/_superlu.cpython-36m-x86_64-linux-gnu.so
+2b12fa1ab000-2b12fa1ad000 rw-p 0004c000 00:30 9258328054134607682        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/sparse/linalg/dsolve/_superlu.cpython-36m-x86_64-linux-gnu.so
+2b12fa1ad000-2b12fa1b0000 rw-p 0004f000 00:30 9258328054134607682        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/sparse/linalg/dsolve/_superlu.cpython-36m-x86_64-linux-gnu.so
+2b12fa1b0000-2b12fa239000 r-xp 00000000 00:30 9258328067027218525        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/sparse/linalg/eigen/arpack/_arpack.cpython-36m-x86_64-linux-gnu.so
+2b12fa239000-2b12fa438000 ---p 00089000 00:30 9258328067027218525        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/sparse/linalg/eigen/arpack/_arpack.cpython-36m-x86_64-linux-gnu.so
+2b12fa438000-2b12fa443000 rw-p 00088000 00:30 9258328067027218525        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/sparse/linalg/eigen/arpack/_arpack.cpython-36m-x86_64-linux-gnu.so
+2b12fa443000-2b12fa445000 rw-p 00000000 00:00 0 
+2b12fa445000-2b12fa449000 rw-p 00094000 00:30 9258328067027218525        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/sparse/linalg/eigen/arpack/_arpack.cpython-36m-x86_64-linux-gnu.so
+2b12fa449000-2b12fa489000 rw-p 00000000 00:00 0 
+2b12fa489000-2b12fa492000 r-xp 00000000 00:30 9258328062716780226        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/optimize/minpack2.cpython-36m-x86_64-linux-gnu.so
+2b12fa492000-2b12fa692000 ---p 00009000 00:30 9258328062716780226        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/optimize/minpack2.cpython-36m-x86_64-linux-gnu.so
+2b12fa692000-2b12fa693000 rw-p 00009000 00:30 9258328062716780226        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/optimize/minpack2.cpython-36m-x86_64-linux-gnu.so
+2b12fa693000-2b12fa695000 rw-p 0000b000 00:30 9258328062716780226        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/optimize/minpack2.cpython-36m-x86_64-linux-gnu.so
+2b12fa695000-2b12fa6d5000 rw-p 00000000 00:00 0 
+2b12fa6d5000-2b12fa6fd000 r-xp 00000000 00:30 9258328062713369879        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/optimize/_group_columns.cpython-36m-x86_64-linux-gnu.so
+2b12fa6fd000-2b12fa8fd000 ---p 00028000 00:30 9258328062713369879        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/optimize/_group_columns.cpython-36m-x86_64-linux-gnu.so
+2b12fa8fd000-2b12fa900000 rw-p 00028000 00:30 9258328062713369879        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/optimize/_group_columns.cpython-36m-x86_64-linux-gnu.so
+2b12fa900000-2b12fa901000 rw-p 00000000 00:00 0 
+2b12fa901000-2b12fa947000 r-xp 00000000 00:30 9258328062728382314        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/optimize/_trlib/_trlib.cpython-36m-x86_64-linux-gnu.so
+2b12fa947000-2b12fab47000 ---p 00046000 00:30 9258328062728382314        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/optimize/_trlib/_trlib.cpython-36m-x86_64-linux-gnu.so
+2b12fab47000-2b12fab4b000 rw-p 00046000 00:30 9258328062728382314        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/optimize/_trlib/_trlib.cpython-36m-x86_64-linux-gnu.so
+2b12fab4b000-2b12fab4c000 rw-p 00000000 00:00 0 
+2b12fab4c000-2b12fab4f000 rw-p 0004b000 00:30 9258328062728382314        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/optimize/_trlib/_trlib.cpython-36m-x86_64-linux-gnu.so
+2b12fab4f000-2b12fab8f000 rw-p 00000000 00:00 0 
+2b12fab8f000-2b12fabad000 r-xp 00000000 00:30 9258328062716780222        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/optimize/_lbfgsb.cpython-36m-x86_64-linux-gnu.so
+2b12fabad000-2b12fadac000 ---p 0001e000 00:30 9258328062716780222        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/optimize/_lbfgsb.cpython-36m-x86_64-linux-gnu.so
+2b12fadac000-2b12fadb1000 rw-p 0001d000 00:30 9258328062716780222        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/optimize/_lbfgsb.cpython-36m-x86_64-linux-gnu.so
+2b12fadb1000-2b12fadbd000 r-xp 00000000 00:30 9258328062713369884        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/optimize/moduleTNC.cpython-36m-x86_64-linux-gnu.so
+2b12fadbd000-2b12fafbc000 ---p 0000c000 00:30 9258328062713369884        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/optimize/moduleTNC.cpython-36m-x86_64-linux-gnu.so
+2b12fafbc000-2b12fafbd000 rw-p 0000b000 00:30 9258328062713369884        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/optimize/moduleTNC.cpython-36m-x86_64-linux-gnu.so
+2b12fafbd000-2b12fafdb000 r-xp 00000000 00:30 9258328062713369882        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/optimize/_cobyla.cpython-36m-x86_64-linux-gnu.so
+2b12fafdb000-2b12fb1db000 ---p 0001e000 00:30 9258328062713369882        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/optimize/_cobyla.cpython-36m-x86_64-linux-gnu.so
+2b12fb1db000-2b12fb1dc000 rw-p 0001e000 00:30 9258328062713369882        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/optimize/_cobyla.cpython-36m-x86_64-linux-gnu.so
+2b12fb1dc000-2b12fb1de000 rw-p 00020000 00:30 9258328062713369882        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/optimize/_cobyla.cpython-36m-x86_64-linux-gnu.so
+2b12fb1de000-2b12fb1f6000 r-xp 00000000 00:30 9258328062715359268        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/optimize/_slsqp.cpython-36m-x86_64-linux-gnu.so
+2b12fb1f6000-2b12fb3f5000 ---p 00018000 00:30 9258328062715359268        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/optimize/_slsqp.cpython-36m-x86_64-linux-gnu.so
+2b12fb3f5000-2b12fb3f9000 rw-p 00017000 00:30 9258328062715359268        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/optimize/_slsqp.cpython-36m-x86_64-linux-gnu.so
+2b12fb3f9000-2b12fb418000 r-xp 00000000 00:30 9258328062715346586        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/optimize/_minpack.cpython-36m-x86_64-linux-gnu.so
+2b12fb418000-2b12fb618000 ---p 0001f000 00:30 9258328062715346586        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/optimize/_minpack.cpython-36m-x86_64-linux-gnu.so
+2b12fb618000-2b12fb61b000 rw-p 0001f000 00:30 9258328062715346586        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/optimize/_minpack.cpython-36m-x86_64-linux-gnu.so
+2b12fb61b000-2b12fb65b000 rw-p 00000000 00:00 0 
+2b12fb65b000-2b12fb680000 r-xp 00000000 00:30 9258328041237995665        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/optimize/_lsq/givens_elimination.cpython-36m-x86_64-linux-gnu.so
+2b12fb680000-2b12fb87f000 ---p 00025000 00:30 9258328041237995665        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/optimize/_lsq/givens_elimination.cpython-36m-x86_64-linux-gnu.so
+2b12fb87f000-2b12fb882000 rw-p 00024000 00:30 9258328041237995665        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/optimize/_lsq/givens_elimination.cpython-36m-x86_64-linux-gnu.so
+2b12fb882000-2b12fb883000 rw-p 00000000 00:00 0 
+2b12fb883000-2b12fb886000 r-xp 00000000 00:30 9258328062730323008        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/optimize/_zeros.cpython-36m-x86_64-linux-gnu.so
+2b12fb886000-2b12fba85000 ---p 00003000 00:30 9258328062730323008        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/optimize/_zeros.cpython-36m-x86_64-linux-gnu.so
+2b12fba85000-2b12fba86000 rw-p 00002000 00:30 9258328062730323008        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/optimize/_zeros.cpython-36m-x86_64-linux-gnu.so
+2b12fba86000-2b12fba90000 r-xp 00000000 00:30 9258328062713369874        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/optimize/__nnls.cpython-36m-x86_64-linux-gnu.so
+2b12fba90000-2b12fbc90000 ---p 0000a000 00:30 9258328062713369874        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/optimize/__nnls.cpython-36m-x86_64-linux-gnu.so
+2b12fbc90000-2b12fbc91000 rw-p 0000a000 00:30 9258328062713369874        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/optimize/__nnls.cpython-36m-x86_64-linux-gnu.so
+2b12fbc91000-2b12fbc93000 rw-p 0000c000 00:30 9258328062713369874        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/optimize/__nnls.cpython-36m-x86_64-linux-gnu.so
+2b12fbc93000-2b12fbcd3000 rw-p 00000000 00:00 0 
+2b12fbcd3000-2b12fbd0f000 r-xp 00000000 00:30 9258328062713369886        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/optimize/_bglu_dense.cpython-36m-x86_64-linux-gnu.so
+2b12fbd0f000-2b12fbf0f000 ---p 0003c000 00:30 9258328062713369886        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/optimize/_bglu_dense.cpython-36m-x86_64-linux-gnu.so
+2b12fbf0f000-2b12fbf14000 rw-p 0003c000 00:30 9258328062713369886        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/optimize/_bglu_dense.cpython-36m-x86_64-linux-gnu.so
+2b12fbf14000-2b12fbf15000 rw-p 00000000 00:00 0 
+2b12fbf15000-2b12fbf18000 r-xp 00000000 00:30 9258328062730323015        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/optimize/_lsap_module.cpython-36m-x86_64-linux-gnu.so
+2b12fbf18000-2b12fc117000 ---p 00003000 00:30 9258328062730323015        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/optimize/_lsap_module.cpython-36m-x86_64-linux-gnu.so
+2b12fc117000-2b12fc118000 rw-p 00002000 00:30 9258328062730323015        /u/home/a/amandawe/.local/lib/python3.6/site-packages/scipy/optimize/_lsap_module.cpython-36m-x86_64-linux-gnu.so
+2b12fc118000-2b12fc198000 rw-p 00000000 00:00 0 
+2b12fc198000-2b12fc1a4000 r-xp 00000000 00:30 9258328041242165440        /u/home/a/amandawe/rcbk/solver.cpython-36m-x86_64-linux-gnu.so
+2b12fc1a4000-2b12fc3a3000 ---p 0000c000 00:30 9258328041242165440        /u/home/a/amandawe/rcbk/solver.cpython-36m-x86_64-linux-gnu.so
+2b12fc3a3000-2b12fc3a4000 r--p 0000b000 00:30 9258328041242165440        /u/home/a/amandawe/rcbk/solver.cpython-36m-x86_64-linux-gnu.so
+2b12fc3a4000-2b12fc3a5000 rw-p 0000c000 00:30 9258328041242165440        /u/home/a/amandawe/rcbk/solver.cpython-36m-x86_64-linux-gnu.so
+2b12fc3a5000-2b12fc3a6000 rw-p 00000000 00:00 0 
+2b12fc3a6000-2b12fc3a9000 r-xp 00000000 08:03 1844559                    /usr/lib64/python3.6/lib-dynload/_multiprocessing.cpython-36m-x86_64-linux-gnu.so
+2b12fc3a9000-2b12fc5a8000 ---p 00003000 08:03 1844559                    /usr/lib64/python3.6/lib-dynload/_multiprocessing.cpython-36m-x86_64-linux-gnu.so
+2b12fc5a8000-2b12fc5a9000 r--p 00002000 08:03 1844559                    /usr/lib64/python3.6/lib-dynload/_multiprocessing.cpython-36m-x86_64-linux-gnu.so
+2b12fc5a9000-2b12fc5aa000 rw-p 00003000 08:03 1844559                    /usr/lib64/python3.6/lib-dynload/_multiprocessing.cpython-36m-x86_64-linux-gnu.so
+2b12fc5aa000-2b12fc5ea000 rw-p 00000000 00:00 0 
+2b1300000000-2b1300021000 rw-p 00000000 00:00 0 
+2b1300021000-2b1304000000 ---p 00000000 00:00 0 
+2b1304000000-2b1304021000 rw-p 00000000 00:00 0 
+2b1304021000-2b1308000000 ---p 00000000 00:00 0 
+2b1308000000-2b1308021000 rw-p 00000000 00:00 0 
+2b1308021000-2b130c000000 ---p 00000000 00:00 0 
+7fffacde3000-7ffface08000 rw-p 00000000 00:00 0                          [stack]
+7fffacecb000-7fffacecd000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+/work/UGE/8.6.4/n7468/job_scripts/3254828: line 3:  9650 Aborted                 (core dumped) python3 bk_solver.py

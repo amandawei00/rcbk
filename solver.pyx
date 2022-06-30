@@ -6,12 +6,21 @@ cimport libc.stdlib as lib
 from libc.stdlib cimport malloc, free
 from libc.string cimport memset
 from libc.math cimport exp, log, sqrt, cos, M_PI, isnan
+import csv
 cnp.import_array()
 
 # load interpolation routines from spline_c.c
 cdef extern from "spline_c.c":
     void spline(double *x, double *y, double *b, double *c, double *d, int n)
     double ispline(double u, double *x, double *y, double *b, double *c, double *d, int n)
+
+cdef int n
+with open('params.csv', 'r') as foo:
+    reader = csv.reader(foo, delimiter='\t')
+    header = next(reader)
+    variab = next(reader)
+    n = int(variab[0])
+    print(n)
 
 # parameters
 cdef int nc = 3                     # number of colors
@@ -20,10 +29,11 @@ cdef double lamb = 0.241
 
 cdef double beta = (11 * nc - 2. * nf)/(12 * M_PI)
 
-cdef int n
 cdef double c2, gamma, qsq2            # fitting parameters
 cdef double xr0, r0, n0, rfr2, r1, r2, xr1, xr2, afr
 
+# cdef double xlr_, n_, coeff1, coeff2, coeff3
+# cdef double k_, kcoeff1, kcoeff2, kcoeff3, xx_
 # allocating memory space for arrays
 # xlr_, n_ describe the most current BK solution
 # coeff1, coeff2, coeff3 are arrays for interpolation coefficients
@@ -42,10 +52,11 @@ cdef double *xx_     = <double*>malloc(n * sizeof(double))
 
 # sets vars C2, gamma, qsq2, rfr2 passed from bk_solver.py
 cpdef void set_params(double qsq_, double gamma_, double c_, int nn_, double rr1_, double rr2_, double xrr1_, double xrr2_, afr_):
-    global c2, gamma, qsq2, rfr2, n, r1, r2, xr1, xr2, afr
+    global c2, gamma, qsq2, rfr2, r1, r2, xr1, xr2, afr
+    global xlr_, n_, coeff1, coeff2, coeff3, k_, kcoeff1, kcoeff2, kcoeff3, xx_
 
     c2, gamma, qsq2 = c_, gamma_, qsq_
-    n, r1, r2, xr1, xr2, afr = nn_, rr1_, rr2_, xrr1_, xrr2_, afr_
+    r1, r2, xr1, xr2, afr = rr1_, rr2_, xrr1_, xrr2_, afr_
 
     rfr2 = 4 * c2/(lamb * lamb * exp(1/(beta * afr)))
     print('n = ' + str(n) + ', r1 = ' + str(r1) + ', r2 = ' + str(r2))
