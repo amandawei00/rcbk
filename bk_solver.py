@@ -21,7 +21,7 @@ beta = (11 * nc - 2. * nf)/(12 * np.pi)
 # MV initial condition -- eq. (2.14) in ref. 0902.1112
 def mv(r):
     xlog = np.log(1/(lamb * r) + ec * np.exp(1))
-    xexp = np.power(qs02 * r * r, gamma) * xlog/4.0
+    xexp = np.power(0.25 * qs02 * r * r, gamma) * xlog
     return 1 - np.exp(-xexp)
 
 # computes integral in eq. (2.5) of ref. 0902.1112
@@ -96,8 +96,8 @@ def master(q_, c2_, g_, ec_, filename='', order='RK4', nn_=399, rr1_=1e-6, rr2_=
     so.set_params(qs02, gamma, c2, n, r1, r2, xr1, xr2, afr_) 
 
     # write parameters to file
-    l = ['n   ', 'r1  ', 'r2  ', 'y   ', 'hy  ', 'ec  ', 'qs02 ', 'c2  ', 'g ', 'order']
-    v = [n, r1, r2, ymax, hy, ec, qs02, c2, gamma, order]
+    l = ['# n', 'r1  ', 'r2  ', 'y   ', 'hy  ', 'ec  ', 'qs02 ', 'c2  ', 'g ', 'order']
+    v = ['# ', n, r1, r2, ymax, hy, ec, qs02, c2, gamma, order]
 
     bk_arr = []
     t1 = time.time()
