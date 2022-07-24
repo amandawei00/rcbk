@@ -21,7 +21,7 @@ beta = (11 * nc - 2. * nf)/(12 * np.pi)
 # MV initial condition -- eq. (2.14) in ref. 0902.1112
 def mv(r):
     xlog = np.log(1/(lamb * r) + ec * np.exp(1))
-    xexp = np.power(0.25 * qs02 * r * r, gamma) * xlog
+    xexp = np.power(qs02 * r * r, gamma) * xlog/4
     return 1 - np.exp(-xexp)
 
 # computes integral in eq. (2.5) of ref. 0902.1112
