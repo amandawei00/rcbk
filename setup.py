@@ -2,7 +2,7 @@ from distutils.core import setup, Extension
 from Cython.Build import cythonize
 import numpy
 
-name = "solver"
+name = "solver1"
 sources = ["solver.pyx"]
 dirs = ['./']
 
